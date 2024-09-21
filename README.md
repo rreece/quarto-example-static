@@ -3,8 +3,13 @@
 My first example of using quarto, following the quarto
 [Get Started](https://quarto.org/docs/get-started/hello/text-editor.html).
 
+Unlike in my [quarto-example](https://github.com/rreece/quarto-example/)
+that does the build in Github Actions, in this repo, I expect the user to
+render the site statically and commit it, then Githb Actions just deploys
+the pages to Github Pages.
+
 You can see the rendered website here:        
-<https://rreece.github.io/quarto-example/>
+<https://rreece.github.io/quarto-example-static/>
 
 
 ## See also
