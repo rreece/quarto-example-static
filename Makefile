@@ -10,15 +10,19 @@ BIB_TXT_FILES := $(sort $(wildcard bibs/*.txt))
 
 all: html
 
-html: $(HTML_FILES)
-
 ## create html
-docs/%.html: %.qmd _quarto.yml bibs/mybib.bib
-	quarto render $< --to html
-	$(PRINT) "make $@ done."
+#html: $(HTML_FILES)
+#
+#docs/%.html: %.qmd _quarto.yml bibs/mybib.bib
+#	quarto render $< --to html
+#	$(PRINT) "make $@ done."
+#
+#
+#project_html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
+#	quarto render --to html
+#	$(PRINT) "html done."
 
-
-project_html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
+html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
 	quarto render --to html
 	$(PRINT) "html done."
 

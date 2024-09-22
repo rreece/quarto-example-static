@@ -57,6 +57,11 @@ format:
       margin-width: 300px
       gutter-width: 1.5em
     html-math-method: mathjax
+    anchor-sections: true
+    smooth-scroll: true
+    citations-hover: true
+    footnotes-hover: true
+    crossrefs-hover: true
 
 crossref:
   fig-title: "Figure"
@@ -72,6 +77,7 @@ csl: templates/apa-no-doi-no-issue-with-notes.csl
 reference-location: margin
 citation-location: document
 link-citations: true
+
 
 execute:
   eval: false
