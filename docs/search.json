@@ -194,17 +194,6 @@
     ]
   },
   {
-    "objectID": "figs-tables.html#table-of-contents-per-html-page",
-    "href": "figs-tables.html#table-of-contents-per-html-page",
-    "title": "Floats, Figures, and Tables",
-    "section": "3 Table of contents per html page",
-    "text": "3 Table of contents per html page\nTo insert a table of contents for a single html page, add the following line to the Markdown, probably near the top of the page as is done for this one.\n&lt;!-- PAGETOC --&gt;",
-    "crumbs": [
-      "Home",
-      "Floats, Figures, and Tables"
-    ]
-  },
-  {
     "objectID": "figs-tables.html#clickmore",
     "href": "figs-tables.html#clickmore",
     "title": "Floats, Figures, and Tables",
