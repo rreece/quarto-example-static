@@ -1,15 +1,9 @@
-markdown-easy
-===========================
+quarto-example-static
+====================================
 
-[![CI ubuntu badge](https://github.com/rreece/markdown-easy/actions/workflows/ci-ubuntu.yml/badge.svg)](https://github.com/rreece/markdown-easy/actions/workflows/ci-ubuntu.yml)
-[![CI macos badge](https://github.com/rreece/markdown-easy/actions/workflows/ci-macos.yml/badge.svg)](https://github.com/rreece/markdown-easy/actions/workflows/ci-macos.yml)
-[![CI windows badge](https://github.com/rreece/markdown-easy/actions/workflows/ci-windows.yml/badge.svg)](https://github.com/rreece/markdown-easy/actions/workflows/ci-windows.yml)
+[![pages deployment](https://github.com/rreece/quarto-example-static/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rreece/quarto-example-static/actions/workflows/pages/pages-build-deployment)
 
 Easy way to compile markdown into documents.
-
-*NOTE: This is work in progress.
-I have a new motivation to clean up this project.
-Please let me know if you find it useful.*
 
 This project is meant to make writing easier and more productive.
 
@@ -20,52 +14,45 @@ Maybe it's a blog, research paper, book draft, or just a set of notes.
 You don't want to think about typesetting details.
 You just want to throw your ideas in some plain text files and call `make`.
 
+----
+
+
+This is my first example of using quarto, following the quarto
+[Get Started](https://quarto.org/docs/get-started/hello/text-editor.html).
+
+You can see the rendered website here:        
+<https://rreece.github.io/quarto-example/>
+
 
 Quick start
 ----------------------------------
 
 Installation:
 
-I'll write installation instructions another time. For now, you can see
-hints in how the GitHub runner does the installation in the CI:
-[`workflows/ci-ubuntu.yml`](https://github.com/rreece/markdown-easy/blob/main/.github/workflows/ci-ubuntu.yml), 
-[`workflows/ci-macos.yml`](https://github.com/rreece/markdown-easy/blob/main/.github/workflows/ci-macos.yml), and 
-[`workflows/ci-windows.yml`](https://github.com/rreece/markdown-easy/blob/main/.github/workflows/ci-windows.yml).
-
-Starting a new document:
-
-*Note: This will delete the markdown files in this example.*
-
-```
-make newdoc
-```
-
-Start writing with a text editor.
-A first example file is created for you: `01-introduction.md`,
-but you can structure your markdown files however you like.
-
-When you are ready to make the document, call
-
-```
-make html
-```
-
-or
-
-```
-make pdf
-```
-
-*More explanation to come...*
+TODO
 
 
 See also
 ----------------------------------
 
--   [rreece.github.io/sw/markdown-memo](http://rreece.github.io/sw/markdown-memo)
+My projects:
+
+-   [github.com/rreece/quarto-example](https://github.com/rreece/quarto-example)
+-   [github.com/rreece/markdown-easy](https://github.com/rreece/markdown-easy)
+-   [github.com/rreece/markdown-memo](https://github.com/rreece/markdown-memo)
+
+Pandoc links:
+
 -   [pandoc.org/README.html](http://pandoc.org/README.html)
 -   [commonmark.org](http://commonmark.org/)
 -   [github.com/lierdakil/pandoc-crossref](https://github.com/lierdakil/pandoc-crossref)
+
+Quarto links:
+
+-   [quarto.org](https://quarto.org/)
+-   [quarto example using math](https://github.com/quarto-dev/quarto-examples/tree/main/html-math)
+-   [quarto using bibtex and CSL](https://github.com/quarto-dev/quarto-examples/tree/main/appendix-csl)
+-   [quarto doc about github-pages](https://quarto.org/docs/publishing/github-pages.html)
 
 Other examples/blogs of writing with markdown:
 
@@ -83,5 +70,5 @@ Author
 ----------------------------------
 
 Ryan Reece ([@rreece](https://github.com/rreece))         
-Created: October 26, 2023
+Created: September 21, 2024
 

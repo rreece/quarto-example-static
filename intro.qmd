@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-subtitle: "This is a subtitle"
+subtitle: "Writing with quarto"
 date: today
 ---
 
