@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "This Site"
+  title: "Quarto Static Example"
   navbar:
     search: true
     left:
@@ -34,6 +34,7 @@ format:
     self-contained: true
     grid:
       margin-width: 350px
+    html-math-method: mathjax
 
 execute:
   eval: false
