@@ -4,13 +4,10 @@ date: today
 ---
 
 
-What this is for
---------------------------------------------
-
-This is a starter template for using [quarto](https://quarto.org/).
-It seems to achieve a lot of what I was trying to do with
-[markdown-memo](https://github.com/rreece/markdown-memo) and
-[markdown-easy](https://github.com/rreece/markdown-easy)---make
-technical and scholarly writing easier and more productive.
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
