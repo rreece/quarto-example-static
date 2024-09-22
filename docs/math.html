@@ -4943,8 +4943,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#typesetting-math" id="toc-typesetting-math" class="nav-link active" data-scroll-target="#typesetting-math">Typesetting math</a></li>
-  <li><a href="#mathjax" id="toc-mathjax" class="nav-link" data-scroll-target="#mathjax">Mathjax</a></li>
+  <li><a href="#typesetting-math" id="toc-typesetting-math" class="nav-link active" data-scroll-target="#typesetting-math"><span class="header-section-number">1</span> Typesetting math</a></li>
+  <li><a href="#mathjax" id="toc-mathjax" class="nav-link" data-scroll-target="#mathjax"><span class="header-section-number">2</span> Mathjax</a></li>
   </ul>
 </nav>
 </nav>
@@ -4980,49 +4980,41 @@ window.Quarto = {
 </header>
 
 
-<section id="typesetting-math" class="level2">
-<h2 class="anchored" data-anchor-id="typesetting-math">Typesetting math</h2>
+<section id="typesetting-math" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="typesetting-math"><span class="header-section-number">1</span> Typesetting math</h2>
 <p>You can do latex inline like this:</p>
 <pre><code>Euler&#39;s formula is remarkable: $e^{i\pi} + 1 = 0$.</code></pre>
 <p>Euler’s formula is remarkable: <span class="math inline">\(e^{i\pi} + 1 = 0\)</span>.</p>
 <p>You can use <code>$$</code> to make an equation block like this:</p>
-<pre><code>$$ \frac{\partial \rho}{\partial t} + \nabla \cdot \vec{j} = 0 \,. \label{eq:continuity} $$</code></pre>
-<p><span class="math display">\[ \frac{\partial \rho}{\partial t} + \nabla \cdot \vec{j} = 0 \,. \label{eq:continuity} \]</span></p>
-<p>The latex equation environment can be used directly. Stokes’ theorem is pretty cool:</p>
-<pre><code>\begin{equation}
-    \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \,.
-    \label{eq:stokes}
-\end{equation}</code></pre>
-<p><span class="math display">\[\begin{equation}
-    \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \,.
-    \label{eq:stokes}
-\end{equation}\]</span></p>
-<p>You can also refer to labeled equations, such as <span class="citation" data-cites="eq:stokes">(<a href="#ref-eq:stokes" role="doc-biblioref"><strong>eq:stokes?</strong></a>)</span>, with the syntax:</p>
-<pre><code>... such as [@eq:stokes],</code></pre>
-<p>The <code>align</code> environment can also be used. Maxwell’s equations, <span class="citation" data-cites="eq:maxwell">(<a href="#ref-eq:maxwell" role="doc-biblioref"><strong>eq:maxwell?</strong></a>)</span>, are also tough to beat:</p>
-<pre><code>\begin{align}
+<pre><code>$$ \frac{\partial \rho}{\partial t} + \nabla \cdot \vec{j} = 0 \,. $$ {#eq-continuity}</code></pre>
+<p><span id="eq-continuity"><span class="math display">\[ \frac{\partial \rho}{\partial t} + \nabla \cdot \vec{j} = 0 \,.  \tag{1}\]</span></span></p>
+<p>Stokes’ theorem is pretty cool:</p>
+<pre><code>$$ \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \,. $$ {#eq-stokes}</code></pre>
+<p><span id="eq-stokes"><span class="math display">\[ \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \,.  \tag{2}\]</span></span></p>
+<p>You can also refer to labeled equations, such as <a href="#eq-stokes" class="quarto-xref">eq. 2</a>, with the syntax:</p>
+<pre><code>... such as @eq-stokes,</code></pre>
+<p>The <code>align</code> environment can also be used. Maxwell’s equations, <a href="#eq-maxwell" class="quarto-xref">eq. 3</a>, are also tough to beat:</p>
+<pre><code>$$
+\begin{align}
     \nabla \cdot  \vec{E} &amp;= \rho \nonumber \\
     \nabla \cdot  \vec{B} &amp;= 0    \nonumber \\
-    \nabla \times \vec{E} &amp;= - \frac{\partial \vec{B}}{\partial t} \label{eq:maxwell} \\
+    \nabla \times \vec{E} &amp;= - \frac{\partial \vec{B}}{\partial t} \\
     \nabla \times \vec{B} &amp;= \vec{j} + \frac{\partial \vec{E}}{\partial t} \nonumber \,.
-\end{align}</code></pre>
-<p><span class="math display">\[\begin{align}
+\end{align}
+$$ {#eq-maxwell}</code></pre>
+<p><span id="eq-maxwell"><span class="math display">\[
+\begin{align}
     \nabla \cdot  \vec{E} &amp;= \rho \nonumber \\
     \nabla \cdot  \vec{B} &amp;= 0    \nonumber \\
-    \nabla \times \vec{E} &amp;= - \frac{\partial \vec{B}}{\partial t} \label{eq:maxwell} \\
+    \nabla \times \vec{E} &amp;= - \frac{\partial \vec{B}}{\partial t} \\
     \nabla \times \vec{B} &amp;= \vec{j} + \frac{\partial \vec{E}}{\partial t} \nonumber \,.
-\end{align}\]</span></p>
+\end{align}
+\tag{3}\]</span></span></p>
 </section>
-<section id="mathjax" class="level2">
-<h2 class="anchored" data-anchor-id="mathjax">Mathjax</h2>
-<p>When doing md <span class="math inline">\(\rightarrow\)</span> tex <span class="math inline">\(\rightarrow\)</span> pdf, LaTeX takes care of the math, but to render the math in html, we use <a href="https://www.mathjax.org/">MathJax</a>. Our html template includes the following code to ask MathJax to render it and number the equations:</p>
-<pre><code>$if(mathjax)$
-&lt;!--- MathJax stuff --&gt;
-&lt;script type=&quot;text/javascript&quot; src=&#39;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#39;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: &quot;all&quot;} } });
-&lt;/script&gt;
-$endif$</code></pre>
+<section id="mathjax" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="mathjax"><span class="header-section-number">2</span> Mathjax</h2>
+<p>When doing md <span class="math inline">\(\rightarrow\)</span> tex <span class="math inline">\(\rightarrow\)</span> pdf, LaTeX takes care of the math, but to render the math in html, we use <a href="https://www.mathjax.org/">MathJax</a>.</p>
+<p>Note that our <code>_quarto.yml</code> has set <code>html-math-method: mathjax</code>.</p>
 
 
 </section>

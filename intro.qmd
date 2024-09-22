@@ -2,6 +2,7 @@
 title: "Introduction"
 subtitle: "Writing with quarto"
 date: today
+number-sections: false
 ---
 
 

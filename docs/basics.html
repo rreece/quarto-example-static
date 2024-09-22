@@ -4804,12 +4804,13 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#sec:sections" id="toc-sec:sections" class="nav-link active" data-scroll-target="#sec\:sections">Sections</a></li>
-  <li><a href="#sec:lists" id="toc-sec:lists" class="nav-link" data-scroll-target="#sec\:lists">Lists</a></li>
-  <li><a href="#sec:blocks" id="toc-sec:blocks" class="nav-link" data-scroll-target="#sec\:blocks">Blocks</a></li>
-  <li><a href="#sec:fonts" id="toc-sec:fonts" class="nav-link" data-scroll-target="#sec\:fonts">Fonts</a></li>
-  <li><a href="#sec:links-and-labels" id="toc-sec:links-and-labels" class="nav-link" data-scroll-target="#sec\:links-and-labels">Links and labels</a></li>
-  <li><a href="#sec:footnotes" id="toc-sec:footnotes" class="nav-link" data-scroll-target="#sec\:footnotes">Footnotes</a></li>
+  <li><a href="#sec-sections" id="toc-sec-sections" class="nav-link active" data-scroll-target="#sec-sections"><span class="header-section-number">1</span> Sections</a></li>
+  <li><a href="#sec-lists" id="toc-sec-lists" class="nav-link" data-scroll-target="#sec-lists"><span class="header-section-number">2</span> Lists</a></li>
+  <li><a href="#sec-blocks" id="toc-sec-blocks" class="nav-link" data-scroll-target="#sec-blocks"><span class="header-section-number">3</span> Blocks</a></li>
+  <li><a href="#sec-fonts" id="toc-sec-fonts" class="nav-link" data-scroll-target="#sec-fonts"><span class="header-section-number">4</span> Fonts</a></li>
+  <li><a href="#sec-hyperlinks" id="toc-sec-hyperlinks" class="nav-link" data-scroll-target="#sec-hyperlinks"><span class="header-section-number">5</span> Hyperlinks</a></li>
+  <li><a href="#sec-cross-references" id="toc-sec-cross-references" class="nav-link" data-scroll-target="#sec-cross-references"><span class="header-section-number">6</span> Cross references</a></li>
+  <li><a href="#sec-footnotes" id="toc-sec-footnotes" class="nav-link" data-scroll-target="#sec-footnotes"><span class="header-section-number">7</span> Footnotes</a></li>
   </ul>
 </nav>
 </nav>
@@ -4846,28 +4847,28 @@ vertical-align: -.125em;
 
 
 <p>Here we review the basics of Markdown. A further reference on Markdown syntax by its creator is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>.</p>
-<section id="sec:sections" class="level2">
-<h2 class="anchored" data-anchor-id="sec:sections">Sections</h2>
+<section id="sec-sections" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-sections"><span class="header-section-number">1</span> Sections</h2>
 <p>Are markded like this:</p>
-<pre><code>Section title {#sec:put-optional-section-label-here}
+<pre><code>Section title {#sec-put-optional-section-label-here}
 ===============================================================================
 
-Sub-section title {#sec:put-optional-sub-section-label-here}
+Sub-section title {#sec-put-optional-sub-section-label-here}
 -------------------------------------------------------------------------------</code></pre>
 <p>Or marked like this:</p>
-<pre><code># Section title {#sec:put-optional-section-label-here}
+<pre><code># Section title {#sec-put-optional-section-label-here}
 
-## Sub-section title {#sec:put-optional-sub-section-label-here}
+## Sub-section title {#sec-put-optional-sub-section-label-here}
 
 ### Sub-sub-section title
 
 Main text here.</code></pre>
 <p>Note the examples of labeling a section in braces with <code>#</code>, as shown above. This allows one to refer to labels in the text like:</p>
-<pre><code>The next section, [@sec:lists], is about lists.</code></pre>
-<p>The next section, <span class="citation" data-cites="sec:lists">(<a href="#ref-sec:lists" role="doc-biblioref"><strong>sec:lists?</strong></a>)</span>, is about lists.</p>
+<pre><code>The next section, @sec-lists, is about lists.</code></pre>
+<p>The next section, <a href="#sec-lists" class="quarto-xref">Section 2</a>, is about lists.</p>
 </section>
-<section id="sec:lists" class="level2">
-<h2 class="anchored" data-anchor-id="sec:lists">Lists</h2>
+<section id="sec-lists" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-lists"><span class="header-section-number">2</span> Lists</h2>
 <p><strong>Unnumbered lists</strong> like this:</p>
 <pre><code>-   Galileo Galilei
 -   Robert G. Ingersoll
@@ -4891,8 +4892,8 @@ Main text here.</code></pre>
 <li>Relativists</li>
 </ol>
 </section>
-<section id="sec:blocks" class="level2">
-<h2 class="anchored" data-anchor-id="sec:blocks">Blocks</h2>
+<section id="sec-blocks" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-blocks"><span class="header-section-number">3</span> Blocks</h2>
 <p>The following is a <strong>quote block</strong>.</p>
 <pre><code>&gt;   It ain&#39;t what you don&#39;t know that gets you into trouble.
 &gt;   It&#39;s what you know for sure that just ain&#39;t so.  
@@ -4958,8 +4959,8 @@ this.</p>
 <hr>
 <p>Boom.</p>
 </section>
-<section id="sec:fonts" class="level2">
-<h2 class="anchored" data-anchor-id="sec:fonts">Fonts</h2>
+<section id="sec-fonts" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-fonts"><span class="header-section-number">4</span> Fonts</h2>
 <pre><code>-   *This is emphasis.*
 -   **This is bold.**
 -   _This is also emphasis._
@@ -4983,34 +4984,37 @@ this.</p>
 -   $\textsf{This works though!}$
 -   $\textsc{But this does not!}$</code></pre>
 </section>
-<section id="sec:links-and-labels" class="level2">
-<h2 class="anchored" data-anchor-id="sec:links-and-labels">Links and labels</h2>
+<section id="sec-hyperlinks" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sec-hyperlinks"><span class="header-section-number">5</span> Hyperlinks</h2>
 <p>Links to URLs are done like this:</p>
 <pre><code>[Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)</code></pre>
 <p><a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorem ipsum</a></p>
 <p>or used directly like this:</p>
 <pre><code>&lt;https://www.google.com&gt;</code></pre>
 <p><a href="https://www.google.com" class="uri">https://www.google.com</a></p>
+</section>
+<section id="sec-cross-references" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-cross-references"><span class="header-section-number">6</span> Cross references</h2>
 <p>When referring to labeled sections/figures/tables, you do not include the literal word “Section”, “Figure”, or “Table”, which will be included for you. These prefixes/words are configurable in the <code>meta.yaml</code> file.</p>
 <p>Refer to labeled things like this:</p>
 <ul>
-<li><strong>for sections:</strong> <code>See [@sec:footnotes] on footnotes.</code><br>
-See <span class="citation" data-cites="sec:footnotes">(<a href="#ref-sec:footnotes" role="doc-biblioref"><strong>sec:footnotes?</strong></a>)</span> on footnotes.</li>
-<li><strong>for figures:</strong> <code>[@fig:scientific_universe] motivates the unity of science.</code><br>
-<span class="citation" data-cites="fig:scientific_universe">(<a href="#ref-fig:scientific_universe" role="doc-biblioref"><strong>fig:scientific_universe?</strong></a>)</span> motivates the unity of science.</li>
-<li><strong>for tables:</strong> <code>Numbers are in [@tbl:atlas_channels].</code><br>
-Numbers are in <span class="citation" data-cites="tbl:atlas_channels">(<a href="#ref-tbl:atlas_channels" role="doc-biblioref"><strong>tbl:atlas_channels?</strong></a>)</span>.</li>
-<li><strong>for equations:</strong> <code>The generalized Stokes&#39; theorem, [@eq:stokes], is rad.</code><br>
-The generalized Stokes’ theorem, <span class="citation" data-cites="eq:stokes">(<a href="#ref-eq:stokes" role="doc-biblioref"><strong>eq:stokes?</strong></a>)</span>, is rad.</li>
+<li><strong>for sections:</strong> <code>See @sec-footnotes on footnotes.</code><br>
+See <a href="#sec-footnotes" class="quarto-xref">Section 7</a> on footnotes.</li>
+<li><strong>for figures:</strong> <code>@fig-scientific-universe motivates the unity of science.</code><br>
+<strong>?@fig-scientific-universe</strong> motivates the unity of science.</li>
+<li><strong>for tables:</strong> <code>Numbers are in @tbl-atlas-channels.</code><br>
+Numbers are in <strong>?@tbl-atlas-channels</strong>.</li>
+<li><strong>for equations:</strong> <code>The generalized Stokes&#39; theorem, @eq-stokes, is rad.</code><br>
+The generalized Stokes’ theorem, <strong>?@eq-stokes</strong>, is rad.</li>
 </ul>
 <p>TODO: The above references to labels on other pages unfortunately don’t work in html, but they work in latex/pdf.</p>
-<p>You can refer to multiple lables like <span class="citation" data-cites="sec:sections sec:lists sec:blocks">(<a href="#ref-sec:sections" role="doc-biblioref"><strong>sec:sections?</strong></a>; <a href="#ref-sec:lists" role="doc-biblioref"><strong>sec:lists?</strong></a>; <a href="#ref-sec:blocks" role="doc-biblioref"><strong>sec:blocks?</strong></a>)</span> like this:</p>
-<pre><code>[@sec:sections;@sec:lists;@sec:blocks]</code></pre>
-<p>Automatic grouping into a range doesn’t seem to be working (for latex, but does for html), so you can also try refer to <span class="citation" data-cites="sec:sections">(Sections <a href="#ref-sec:sections" role="doc-biblioref"><strong>sec:sections?</strong></a>)</span>–<span class="citation" data-cites="sec:blocks">(<a href="#ref-sec:blocks" role="doc-biblioref"><strong>sec:blocks?</strong></a>)</span> in some versions like this:</p>
-<pre><code>[Sections @sec:sections]--[-@sec:blocks]</code></pre>
+<p>You can refer to multiple lables like <a href="#sec-sections" class="quarto-xref">Section 1</a>, <a href="#sec-lists" class="quarto-xref">Section 2</a>, <a href="#sec-blocks" class="quarto-xref">Section 3</a> like this:</p>
+<pre><code>[@sec-sections;@sec-lists;@sec-blocks]</code></pre>
+<p>Automatic grouping into a range doesn’t seem to be working (for latex, but does for html), so you can also try refer to <a href="#sec-sections" class="quarto-xref">Sections 1</a>–<a href="#sec-blocks" class="quarto-xref">3</a> in some versions like this:</p>
+<pre><code>[Sections @sec-sections]--[-@sec-blocks]</code></pre>
 </section>
-<section id="sec:footnotes" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sec:footnotes">Footnotes</h2>
+<section id="sec-footnotes" class="level2 page-columns page-full" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="sec-footnotes"><span class="header-section-number">7</span> Footnotes</h2>
 <pre><code>Here&#39;s how you do a footnote[^SomeSpecialNote].
 
 [^SomeSpecialNote]: Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque.

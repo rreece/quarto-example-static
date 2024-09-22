@@ -58,10 +58,20 @@ format:
       gutter-width: 1.5em
     html-math-method: mathjax
 
+crossref:
+  fig-title: "Figure"
+  tbl-title: "Table"
+  eq-prefix: "eq."
+  title-delim: ":"
+
+number-sections: true
+#number-depth: 3
+
 bibliography: bibs/mybib.bib
 csl: templates/apa-no-doi-no-issue-with-notes.csl
 reference-location: margin
 citation-location: document
+link-citations: true
 
 execute:
   eval: false

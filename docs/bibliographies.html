@@ -4963,8 +4963,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#making-a-bibliography" id="toc-making-a-bibliography" class="nav-link active" data-scroll-target="#making-a-bibliography">Making a bibliography</a></li>
-  <li><a href="#doing-citations" id="toc-doing-citations" class="nav-link" data-scroll-target="#doing-citations">Doing citations</a></li>
+  <li><a href="#making-a-bibliography" id="toc-making-a-bibliography" class="nav-link active" data-scroll-target="#making-a-bibliography"><span class="header-section-number">1</span> Making a bibliography</a></li>
+  <li><a href="#doing-citations" id="toc-doing-citations" class="nav-link" data-scroll-target="#doing-citations"><span class="header-section-number">2</span> Doing citations</a></li>
   </ul>
 </nav>
 </nav>
@@ -5000,8 +5000,8 @@ window.Quarto = {
 </header>
 
 
-<section id="making-a-bibliography" class="level2">
-<h2 class="anchored" data-anchor-id="making-a-bibliography">Making a bibliography</h2>
+<section id="making-a-bibliography" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="making-a-bibliography"><span class="header-section-number">1</span> Making a bibliography</h2>
 <p>Markdown-memo uses <a href="https://en.wikipedia.org/wiki/BibTeX">bibtex</a> via <a href="http://pandoc.org/">pandoc</a> to generate a bibliography for your document. We’ve made this even simpler by allowing the user to create a simple text file to generate the necessary bibtex <code>.bib</code> file using the <a href="https://github.com/rreece/markdown2bib"><code>markdown2bib</code></a> script. Markdown-memo looks for any <code>bibs/*.txt</code> files and uses <code>markdown2bib</code> to combine them and create <code>bibs/mybib.bib</code> in bibtex format. This is later used by pandoc when creating tex <span class="math inline">\(\rightarrow\)</span> pdf or html.</p>
 <p>The <code>bibs/*.txt</code> should be plain text with a single reference per line, with each reference in a style that loosely follows the <a href="http://www.library.arizona.edu/search/reference/citation-apa.html">American Psychological Association (APA)</a>, which is commonly used in humanities. Currently four types of references are supported: <code>article</code>, <code>book</code>, <code>incollection</code>, and <code>misc</code>. The journal or book titles need to be in markdown-style <em>emphasis</em>, meaning <code>*Set Within Asterixis*</code>. Also note that for works in a collection, you need to use the word “<code>In</code>” in the right place, like in the reference by Quine below. The rest of the syntax tries to be forgiving. If you want to add a <code>note</code> to appear at the end of the reference, put it at the end within [square brackets] like the work by Plato below.</p>
 <p>For example, the <code>mybib.txt</code> file in this document is</p>
@@ -5019,8 +5019,8 @@ van Fraassen, B. (1980). *The Scientific Image*. Oxford University Press.</code>
 <pre><code>dorefs: false</code></pre>
 <p>in <code>meta.yaml</code>, and then these scripts and programs are not run.</p>
 </section>
-<section id="doing-citations" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="doing-citations">Doing citations</h2>
+<section id="doing-citations" class="level2 page-columns page-full" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="doing-citations"><span class="header-section-number">2</span> Doing citations</h2>
 <p>Citations start with an <code>@</code>-sign, and can be used inline, like:</p>
 <pre><code>@Miller_2014_Realism argues that we should get real.</code></pre>
 <p>which produces:</p>
