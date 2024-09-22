@@ -46,6 +46,8 @@ format:
     toc: true
     toc-depth: 2
     toc-location: left
+#    toc-title: "Contents"
+#    toc-expand: 1
     fontsize: 1.1em
     code-fold: true
     self-contained: true

@@ -1,23 +1,24 @@
-# Makefile for quarto-example
+## Makefile for quarto-example
 
 PRINT = @echo '==>  '
 
 QMD_FILES := $(wildcard *.qmd)
-HTML_FILES := $(QMD_FILES:%.qmd=%.html)
+HTML_FILES := $(QMD_FILES:%.qmd=docs/%.html)
 BIB_TXT_FILES := $(sort $(wildcard bibs/*.txt))
 
-.PHONY: all html clean realclean
+.PHONY: all html project_html publish clean realclean
 
 all: html
 
-#html: $(HTML_FILES)
-#
-## create html
-#%.html: %.qmd _quarto.yml bibs/mybib.bib
-#	quarto render $< --to html
-#	$(PRINT) "make $@ done."
+html: $(HTML_FILES)
 
-html: bibs/mybib.bib _quarto.yml
+## create html
+docs/%.html: %.qmd _quarto.yml bibs/mybib.bib
+	quarto render $< --to html
+	$(PRINT) "make $@ done."
+
+
+project_html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
 	quarto render --to html
 	$(PRINT) "html done."
 
@@ -34,9 +35,15 @@ bibs/mybib.bib: $(BIB_TXT_FILES)
 	$(PRINT) "make $@ done."
 
 
+## publish
+publish: html
+	quarto publish gh-pages --no-prompt --no-browser
+
+
 JUNK = *.log
 OUTS = docs
 
+## clean up
 clean:
 	@rm -f $(JUNK)
 	$(PRINT) "make $@ done."

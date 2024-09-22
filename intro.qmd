@@ -14,4 +14,3 @@ It seems to achieve a lot of what I was trying to do with
 [markdown-easy](https://github.com/rreece/markdown-easy)---make
 technical and scholarly writing easier and more productive.
 
-
