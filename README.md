@@ -18,7 +18,7 @@ This is my first example of using quarto, following the quarto
 [Get Started](https://quarto.org/docs/get-started/hello/text-editor.html).
 
 You can see the rendered website here:
-[rreece.github.io/quarto-example-static](https://rreece.github.io/quarto-example-static/).
+[rreece.github.io/quarto-example-static](https://rreece.github.io/quarto-example-static/)
 
 
 Quick start
@@ -50,6 +50,7 @@ Quarto links:
 -   [quarto example using math](https://github.com/quarto-dev/quarto-examples/tree/main/html-math)
 -   [quarto using bibtex and CSL](https://github.com/quarto-dev/quarto-examples/tree/main/appendix-csl)
 -   [quarto doc about github-pages](https://quarto.org/docs/publishing/github-pages.html)
+-   [example `_quarto.yml`](https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml)
 
 Other examples/blogs of writing with markdown:
 
