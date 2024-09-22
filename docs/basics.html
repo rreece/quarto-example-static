@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-09-21">
 
-<title>This Site</title>
+<title>Basics – This Site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4743,7 +4743,7 @@ vertical-align: -.125em;
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">This Site</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basics.html">Basics</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -4763,7 +4763,7 @@ vertical-align: -.125em;
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./basics.html" class="sidebar-item-text sidebar-link">
+  <a href="./basics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Basics</span></a>
   </div>
 </li>
@@ -4793,7 +4793,18 @@ vertical-align: -.125em;
 </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec:sections" id="toc-sec:sections" class="nav-link active" data-scroll-target="#sec\:sections">Sections</a></li>
+  <li><a href="#sec:lists" id="toc-sec:lists" class="nav-link" data-scroll-target="#sec\:lists">Lists</a></li>
+  <li><a href="#sec:blocks" id="toc-sec:blocks" class="nav-link" data-scroll-target="#sec\:blocks">Blocks</a></li>
+  <li><a href="#sec:fonts" id="toc-sec:fonts" class="nav-link" data-scroll-target="#sec\:fonts">Fonts</a></li>
+  <li><a href="#sec:links-and-labels" id="toc-sec:links-and-labels" class="nav-link" data-scroll-target="#sec\:links-and-labels">Links and labels</a></li>
+  <li><a href="#sec:footnotes" id="toc-sec:footnotes" class="nav-link" data-scroll-target="#sec\:footnotes">Footnotes</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -4804,7 +4815,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">This Site</h1>
+<h1 class="title">Basics</h1>
 </div>
 
 
@@ -4827,11 +4838,192 @@ vertical-align: -.125em;
 </header>
 
 
-<p>Title page.</p>
+<p>Here we review the basics of Markdown. A further reference on Markdown syntax by its creator is <a href="http://daringfireball.net/projects/markdown/syntax">here</a>.</p>
+<section id="sec:sections" class="level2">
+<h2 class="anchored" data-anchor-id="sec:sections">Sections</h2>
+<p>Are markded like this:</p>
+<pre><code>Section title {#sec:put-optional-section-label-here}
+===============================================================================
+
+Sub-section title {#sec:put-optional-sub-section-label-here}
+-------------------------------------------------------------------------------</code></pre>
+<p>Or marked like this:</p>
+<pre><code># Section title {#sec:put-optional-section-label-here}
+
+## Sub-section title {#sec:put-optional-sub-section-label-here}
+
+### Sub-sub-section title
+
+Main text here.</code></pre>
+<p>Note the examples of labeling a section in braces with <code>#</code>, as shown above. This allows one to refer to labels in the text like:</p>
+<pre><code>The next section, [@sec:lists], is about lists.</code></pre>
+<p>The next section, <span class="citation" data-cites="sec:lists">[@sec:lists]</span>, is about lists.</p>
+</section>
+<section id="sec:lists" class="level2">
+<h2 class="anchored" data-anchor-id="sec:lists">Lists</h2>
+<p><strong>Unnumbered lists</strong> like this:</p>
+<pre><code>-   Galileo Galilei
+-   Robert G. Ingersoll
+-   Jill Tarter</code></pre>
+<ul>
+<li>Galileo Galilei</li>
+<li>Robert G. Ingersoll</li>
+<li>Jill Tarter</li>
+</ul>
+<p><strong>Numbered lists</strong> like this:</p>
+<pre><code>1.  Na&amp;iuml;ve realists
+1.  Scientific realists
+1.  Constructive empiricists
+1.  Positivists
+1.  Relativists</code></pre>
+<ol type="1">
+<li>Naïve realists</li>
+<li>Scientific realists</li>
+<li>Constructive empiricists</li>
+<li>Positivists</li>
+<li>Relativists</li>
+</ol>
+</section>
+<section id="sec:blocks" class="level2">
+<h2 class="anchored" data-anchor-id="sec:blocks">Blocks</h2>
+<p>The following is a <strong>quote block</strong>.</p>
+<pre><code>&gt;   It ain&#39;t what you don&#39;t know that gets you into trouble.
+&gt;   It&#39;s what you know for sure that just ain&#39;t so.  
+
+-- Mark Twain</code></pre>
+<blockquote class="blockquote">
+<p>It ain’t what you don’t know that gets you into trouble. It’s what you know for sure that just ain’t so.</p>
+</blockquote>
+<p>– Mark Twain</p>
+<p>A <strong>code block</strong> (used throughout these examples) is just indented with 4 spaces, like this:</p>
+<pre><code>    def bubble_sort(alist):
+        exchanges = True
+        passnum = len(alist)-1
+        while passnum &gt; 0 and exchanges:
+           exchanges = False
+           for i in range(passnum):
+               if alist[i]&gt;alist[i+1]:
+                   exchanges = True
+                   temp = alist[i]
+                   alist[i] = alist[i+1]
+                   alist[i+1] = temp
+           passnum = passnum-1
+
+    alist=[20,30,40,90,50,60,70,80,100,110]
+    bubble_sort(alist)
+    print(alist)</code></pre>
+<p>which makes:</p>
+<pre><code>def bubble_sort(alist):
+    exchanges = True
+    passnum = len(alist)-1
+    while passnum &gt; 0 and exchanges:
+       exchanges = False
+       for i in range(passnum):
+           if alist[i]&gt;alist[i+1]:
+               exchanges = True
+               temp = alist[i]
+               alist[i] = alist[i+1]
+               alist[i+1] = temp
+       passnum = passnum-1
+
+alist=[20,30,40,90,50,60,70,80,100,110]
+bubble_sort(alist)
+print(alist)</code></pre>
+<p>Maybe you want to refer to <strong>code inline</strong> like this with backticks:</p>
+<pre><code>Here&#39;s some inline code: `vec.push_back(3.14)`.</code></pre>
+<p>Here’s some inline code: <code>vec.push_back(3.14)</code>.</p>
+<p>For poems and the like where you want <strong>linebreaks taken literally</strong>, prepend lines with <code>|</code> and a single space. Additional spaces can be used, but will indent the output.</p>
+<pre><code>| Art is long,
+| Life is short,
+| Opportunity fleeting,
+| Experiment dangerous,
+| Judgment difficult.</code></pre>
+<div class="line-block">Art is long,<br>
+Life is short,<br>
+Opportunity fleeting,<br>
+Experiment dangerous,<br>
+Judgment difficult.</div>
+<p>Otherwise, one can put two or more spaces at the end of a line of Markdown for the linebreak to be taken literally<br>
+like<br>
+this.</p>
+<p>A <strong>horizontal rule</strong> can be made by just writing some number of dashes:</p>
+<pre><code>----------------------------------------------------</code></pre>
+<hr>
+<p>Boom.</p>
+</section>
+<section id="sec:fonts" class="level2">
+<h2 class="anchored" data-anchor-id="sec:fonts">Fonts</h2>
+<pre><code>-   *This is emphasis.*
+-   **This is bold.**
+-   _This is also emphasis._
+-   __This is also bold.__
+-   _This is emphasis **and** bold._
+-   __This is bold *and* emphasis.__
+-   ~~This is struck-out.~~</code></pre>
+<p>produces:</p>
+<ul>
+<li><em>This is emphasis.</em></li>
+<li><strong>This is bold.</strong></li>
+<li><em>This is also emphasis.</em></li>
+<li><strong>This is also bold.</strong></li>
+<li><em>This is emphasis <strong>and</strong> bold.</em></li>
+<li><strong>This is bold <em>and</em> emphasis.</strong></li>
+<li><del>This is struck-out.</del></li>
+</ul>
+<p>Don’t do these. These will work in LaTeX () but may not in html.</p>
+<pre><code>-   \textsf{This should be Sans.}
+-   \textsc{This Should BE SMALL caps.}
+-   $\textsf{This works though!}$
+-   $\textsc{But this does not!}$</code></pre>
+</section>
+<section id="sec:links-and-labels" class="level2">
+<h2 class="anchored" data-anchor-id="sec:links-and-labels">Links and labels</h2>
+<p>Links to URLs are done like this:</p>
+<pre><code>[Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)</code></pre>
+<p><a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorem ipsum</a></p>
+<p>or used directly like this:</p>
+<pre><code>&lt;https://www.google.com&gt;</code></pre>
+<p><a href="https://www.google.com" class="uri">https://www.google.com</a></p>
+<p>When referring to labeled sections/figures/tables, you do not include the literal word “Section”, “Figure”, or “Table”, which will be included for you. These prefixes/words are configurable in the <code>meta.yaml</code> file.</p>
+<p>Refer to labeled things like this:</p>
+<ul>
+<li><strong>for sections:</strong> <code>See [@sec:footnotes] on footnotes.</code><br>
+See <span class="citation" data-cites="sec:footnotes">[@sec:footnotes]</span> on footnotes.</li>
+<li><strong>for figures:</strong> <code>[@fig:scientific_universe] motivates the unity of science.</code><br>
+<span class="citation" data-cites="fig:scientific_universe">[@fig:scientific_universe]</span> motivates the unity of science.</li>
+<li><strong>for tables:</strong> <code>Numbers are in [@tbl:atlas_channels].</code><br>
+Numbers are in <span class="citation" data-cites="tbl:atlas_channels">[@tbl:atlas_channels]</span>.</li>
+<li><strong>for equations:</strong> <code>The generalized Stokes&#39; theorem, [@eq:stokes], is rad.</code><br>
+The generalized Stokes’ theorem, <span class="citation" data-cites="eq:stokes">[@eq:stokes]</span>, is rad.</li>
+</ul>
+<p>TODO: The above references to labels on other pages unfortunately don’t work in html, but they work in latex/pdf.</p>
+<p>You can refer to multiple lables like <span class="citation" data-cites="sec:sections sec:lists sec:blocks">[@sec:sections;@sec:lists;@sec:blocks]</span> like this:</p>
+<pre><code>[@sec:sections;@sec:lists;@sec:blocks]</code></pre>
+<p>Automatic grouping into a range doesn’t seem to be working (for latex, but does for html), so you can also try refer to <span class="citation" data-cites="sec:sections">[Sections @sec:sections]</span>–<span class="citation" data-cites="sec:blocks">[-@sec:blocks]</span> in some versions like this:</p>
+<pre><code>[Sections @sec:sections]--[-@sec:blocks]</code></pre>
+</section>
+<section id="sec:footnotes" class="level2">
+<h2 class="anchored" data-anchor-id="sec:footnotes">Footnotes</h2>
+<pre><code>Here&#39;s how you do a footnote[^SomeSpecialNote].
+
+[^SomeSpecialNote]: Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque.
+    Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip
+    accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax
+    an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed,
+    at falli feugiat est.</code></pre>
+<p>produces:</p>
+<p>Here’s how you do a footnote<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed, at falli feugiat est.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

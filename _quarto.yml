@@ -5,14 +5,37 @@ project:
 website:
   title: "This Site"
   navbar:
+    search: true
     left:
-      - href: index.qmd
-        text: Home
       - about.qmd
+    tools:
+      - icon: twitter
+        href: https://x.com/RyanDavidReece
+      - icon: github
+        href: https://github.com/rreece/quarto-example-static
+  sidebar:
+    style: "docked"
+    contents:
+      - intro.qmd
+      - basics.qmd
+      - bibliographies.qmd
+      - math.qmd
+      - figs-tables.qmd
+      - jupyter.qmd
 
 format:
   html:
     theme: flatly
-#    toc: true
+    toc: true
+    toc-depth: 2
+    toc-location: left
     fontsize: 1.2em
+    code-fold: true
+    self-contained: true
+    grid:
+      margin-width: 350px
+
+execute:
+  eval: false
+  echo: fenced
 
