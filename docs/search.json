@@ -6,7 +6,7 @@
     "section": "",
     "text": "You can do latex inline like this:\nEuler's formula is remarkable: $e^{i\\pi} + 1 = 0$.\nEuler’s formula is remarkable: \\(e^{i\\pi} + 1 = 0\\).\nYou can use $$ to make an equation block like this:\n$$ \\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot \\vec{j} = 0 \\,. \\label{eq:continuity} $$\n\\[ \\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot \\vec{j} = 0 \\,. \\label{eq:continuity} \\]\nThe latex equation environment can be used directly. Stokes’ theorem is pretty cool:\n\\begin{equation}\n    \\int_{\\partial\\Omega} \\omega = \\int_{\\Omega} \\mathrm{d}\\omega \\,.\n    \\label{eq:stokes}\n\\end{equation}\n\\[\\begin{equation}\n    \\int_{\\partial\\Omega} \\omega = \\int_{\\Omega} \\mathrm{d}\\omega \\,.\n    \\label{eq:stokes}\n\\end{equation}\\]\nYou can also refer to labeled equations, such as [@eq:stokes], with the syntax:\n... such as [@eq:stokes],\nThe align environment can also be used. Maxwell’s equations, [@eq:maxwell], are also tough to beat:\n\\begin{align}\n    \\nabla \\cdot  \\vec{E} &= \\rho \\nonumber \\\\\n    \\nabla \\cdot  \\vec{B} &= 0    \\nonumber \\\\\n    \\nabla \\times \\vec{E} &= - \\frac{\\partial \\vec{B}}{\\partial t} \\label{eq:maxwell} \\\\\n    \\nabla \\times \\vec{B} &= \\vec{j} + \\frac{\\partial \\vec{E}}{\\partial t} \\nonumber \\,.\n\\end{align}\n\\[\\begin{align}\n    \\nabla \\cdot  \\vec{E} &= \\rho \\nonumber \\\\\n    \\nabla \\cdot  \\vec{B} &= 0    \\nonumber \\\\\n    \\nabla \\times \\vec{E} &= - \\frac{\\partial \\vec{B}}{\\partial t} \\label{eq:maxwell} \\\\\n    \\nabla \\times \\vec{B} &= \\vec{j} + \\frac{\\partial \\vec{E}}{\\partial t} \\nonumber \\,.\n\\end{align}\\]",
     "crumbs": [
-      "About",
+      "Home",
       "Mathematics"
     ]
   },
@@ -17,7 +17,7 @@
     "section": "",
     "text": "You can do latex inline like this:\nEuler's formula is remarkable: $e^{i\\pi} + 1 = 0$.\nEuler’s formula is remarkable: \\(e^{i\\pi} + 1 = 0\\).\nYou can use $$ to make an equation block like this:\n$$ \\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot \\vec{j} = 0 \\,. \\label{eq:continuity} $$\n\\[ \\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot \\vec{j} = 0 \\,. \\label{eq:continuity} \\]\nThe latex equation environment can be used directly. Stokes’ theorem is pretty cool:\n\\begin{equation}\n    \\int_{\\partial\\Omega} \\omega = \\int_{\\Omega} \\mathrm{d}\\omega \\,.\n    \\label{eq:stokes}\n\\end{equation}\n\\[\\begin{equation}\n    \\int_{\\partial\\Omega} \\omega = \\int_{\\Omega} \\mathrm{d}\\omega \\,.\n    \\label{eq:stokes}\n\\end{equation}\\]\nYou can also refer to labeled equations, such as [@eq:stokes], with the syntax:\n... such as [@eq:stokes],\nThe align environment can also be used. Maxwell’s equations, [@eq:maxwell], are also tough to beat:\n\\begin{align}\n    \\nabla \\cdot  \\vec{E} &= \\rho \\nonumber \\\\\n    \\nabla \\cdot  \\vec{B} &= 0    \\nonumber \\\\\n    \\nabla \\times \\vec{E} &= - \\frac{\\partial \\vec{B}}{\\partial t} \\label{eq:maxwell} \\\\\n    \\nabla \\times \\vec{B} &= \\vec{j} + \\frac{\\partial \\vec{E}}{\\partial t} \\nonumber \\,.\n\\end{align}\n\\[\\begin{align}\n    \\nabla \\cdot  \\vec{E} &= \\rho \\nonumber \\\\\n    \\nabla \\cdot  \\vec{B} &= 0    \\nonumber \\\\\n    \\nabla \\times \\vec{E} &= - \\frac{\\partial \\vec{B}}{\\partial t} \\label{eq:maxwell} \\\\\n    \\nabla \\times \\vec{B} &= \\vec{j} + \\frac{\\partial \\vec{E}}{\\partial t} \\nonumber \\,.\n\\end{align}\\]",
     "crumbs": [
-      "About",
+      "Home",
       "Mathematics"
     ]
   },
@@ -28,7 +28,7 @@
     "section": "Mathjax",
     "text": "Mathjax\nWhen doing md \\(\\rightarrow\\) tex \\(\\rightarrow\\) pdf, LaTeX takes care of the math, but to render the math in html, we use MathJax. Our html template includes the following code to ask MathJax to render it and number the equations:\n$if(mathjax)$\n&lt;!--- MathJax stuff --&gt;\n&lt;script type=\"text/javascript\" src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;\n&lt;script type=\"text/x-mathjax-config\"&gt;\n    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: \"all\"} } });\n&lt;/script&gt;\n$endif$",
     "crumbs": [
-      "About",
+      "Home",
       "Mathematics"
     ]
   },
@@ -39,7 +39,7 @@
     "section": "",
     "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\n```{python}\n#| label: fig-polar\n#| fig-cap: A line plot on a polar axis\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis",
     "crumbs": [
-      "About",
+      "Home",
       "Jupyter"
     ]
   },
@@ -57,7 +57,7 @@
     "section": "",
     "text": "This is a starter template for using quarto. It seems to achieve a lot of what I was trying to do with markdown-memo and markdown-easy—make technical and scholarly writing easier and more productive.",
     "crumbs": [
-      "About",
+      "Home",
       "Introduction"
     ]
   },
@@ -68,7 +68,7 @@
     "section": "",
     "text": "This is a starter template for using quarto. It seems to achieve a lot of what I was trying to do with markdown-memo and markdown-easy—make technical and scholarly writing easier and more productive.",
     "crumbs": [
-      "About",
+      "Home",
       "Introduction"
     ]
   },
@@ -86,7 +86,7 @@
     "section": "",
     "text": "To add a figure, use the following basic syntax:\n![caption](img/image-path.png){#fig:scientific_universe}\nFor example,\n![The scale of the universe mapped to the branches of science and the hierarchy\n    of science. CC BY-SA 3.0 (2013) [Wikimedia Commons](https://en.wikipedia.org/wiki/Science#/media/File:The_Scientific_Universe.png).\n    ](img/1024px-the_scientific_universe.png){#fig:scientific_universe}\nproduces:\n\n\n\nThe scale of the universe mapped to the branches of science and the hierarchy of science. CC BY-SA 3.0 (2013) Wikimedia Commons.\n\n\n[@Fig:scientific_universe] shows some cool things.\nLorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed, at falli feugiat est.\nNe nonumy quodsi petentium vix, mel ad errem accusata periculis. Porro urbanitas consetetur mei eu, his nisl officiis ei. Ei cum fugit graece, ne qui tantas qualisque voluptaria. Vis ut laoreet euripidis, vix aeque omittam at, vix no cetero volumus. Per te omnium volutpat torquatos, cu vis sumo decore. Eirmod hendrerit an pri.\nAnother example:\n![The observed (solid) local $p_{0}$ as a function of $m_{H}$ in the low mass range.\n    The dashed curve shows the expected local $p_{0}$ under the hypothesis of a\n    SM Higgs boson signal at that mass with its $\\pm{}1\\sigma$ band.\n    The horizontal dashed lines indicate the $p$-values corresponding to significances\n    of 1 to 6$\\sigma$\\ [@ATLAS_2012_Observation_of_a_new_particle_in_the_search]\\.\n    ](img/ATLAS-local-p0-vs-mH.png){#fig:ATLAS_local_p0_vs_mH}\nproduces:\n\n\n\nThe observed (solid) local \\(p_{0}\\) as a function of \\(m_{H}\\) in the low mass range. The dashed curve shows the expected local \\(p_{0}\\) under the hypothesis of a SM Higgs boson signal at that mass with its \\(\\pm{}1\\sigma\\) band. The horizontal dashed lines indicate the \\(p\\)-values corresponding to significances of 1 to 6\\(\\sigma\\) [@ATLAS_2012_Observation_of_a_new_particle_in_the_search].\n\n\nYou can refer to labeled figuers like this:\n[@fig:ATLAS_local_p0_vs_mH] shows the $p_{0}$ value as a function of the reconstructed\nHiggs mass from the ATLAS experiment.\n[@fig:ATLAS_local_p0_vs_mH] shows the \\(p_{0}\\) value as a function of the reconstructed Higgs mass from the ATLAS experiment.",
     "crumbs": [
-      "About",
+      "Home",
       "Floats, Figures, and Tables"
     ]
   },
@@ -97,7 +97,7 @@
     "section": "",
     "text": "To add a figure, use the following basic syntax:\n![caption](img/image-path.png){#fig:scientific_universe}\nFor example,\n![The scale of the universe mapped to the branches of science and the hierarchy\n    of science. CC BY-SA 3.0 (2013) [Wikimedia Commons](https://en.wikipedia.org/wiki/Science#/media/File:The_Scientific_Universe.png).\n    ](img/1024px-the_scientific_universe.png){#fig:scientific_universe}\nproduces:\n\n\n\nThe scale of the universe mapped to the branches of science and the hierarchy of science. CC BY-SA 3.0 (2013) Wikimedia Commons.\n\n\n[@Fig:scientific_universe] shows some cool things.\nLorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed, at falli feugiat est.\nNe nonumy quodsi petentium vix, mel ad errem accusata periculis. Porro urbanitas consetetur mei eu, his nisl officiis ei. Ei cum fugit graece, ne qui tantas qualisque voluptaria. Vis ut laoreet euripidis, vix aeque omittam at, vix no cetero volumus. Per te omnium volutpat torquatos, cu vis sumo decore. Eirmod hendrerit an pri.\nAnother example:\n![The observed (solid) local $p_{0}$ as a function of $m_{H}$ in the low mass range.\n    The dashed curve shows the expected local $p_{0}$ under the hypothesis of a\n    SM Higgs boson signal at that mass with its $\\pm{}1\\sigma$ band.\n    The horizontal dashed lines indicate the $p$-values corresponding to significances\n    of 1 to 6$\\sigma$\\ [@ATLAS_2012_Observation_of_a_new_particle_in_the_search]\\.\n    ](img/ATLAS-local-p0-vs-mH.png){#fig:ATLAS_local_p0_vs_mH}\nproduces:\n\n\n\nThe observed (solid) local \\(p_{0}\\) as a function of \\(m_{H}\\) in the low mass range. The dashed curve shows the expected local \\(p_{0}\\) under the hypothesis of a SM Higgs boson signal at that mass with its \\(\\pm{}1\\sigma\\) band. The horizontal dashed lines indicate the \\(p\\)-values corresponding to significances of 1 to 6\\(\\sigma\\) [@ATLAS_2012_Observation_of_a_new_particle_in_the_search].\n\n\nYou can refer to labeled figuers like this:\n[@fig:ATLAS_local_p0_vs_mH] shows the $p_{0}$ value as a function of the reconstructed\nHiggs mass from the ATLAS experiment.\n[@fig:ATLAS_local_p0_vs_mH] shows the \\(p_{0}\\) value as a function of the reconstructed Higgs mass from the ATLAS experiment.",
     "crumbs": [
-      "About",
+      "Home",
       "Floats, Figures, and Tables"
     ]
   },
@@ -108,7 +108,7 @@
     "section": "Tables",
     "text": "Tables\nThe basic syntax for a table is:\nTable: Approximate number of readout channels per sub-detector in ATLAS for the primary sub-detectors (ignoring the minbias trigger system, luminosity monitors, and DCS sensors) [@ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron]. {#tbl:atlas_channels}\n\n| System                | Subsystem     |  Approx. channels |\n|:----------------------|:--------------|------------------:|\n| Inner detector        | Pixels        |              80 M |\n|                       | SCT           |             6.3 M |\n|                       | TRT           |             350 k |\n| EM Calorimeter        | LAr barrel    |             110 k |\n|                       | LAr end-cap   |              64 k |\n| Hadronic Calorimeter  | Tile barrel   |             9.8 k |\n|                       | LAr end-cap   |             5.6 k |\n|                       | LAr forward   |             3.5 k |\n| Muon spectrometer     | MDTs          |             350 k |\n|                       | CSCs          |              31 k |\n|                       | RPCs          |             370 k |\n|                       | TGCs          |             320 k |\n| Total                 |               |              88 M |\nwhich produces:\n\nApproximate number of readout channels per sub-detector in ATLAS for the primary sub-detectors (ignoring the minbias trigger system, luminosity monitors, and DCS sensors) [@ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron]. {#tbl:atlas_channels}\n\n\nSystem\nSubsystem\nApprox. channels\n\n\n\n\nInner detector\nPixels\n80 M\n\n\n\nSCT\n6.3 M\n\n\n\nTRT\n350 k\n\n\nEM Calorimeter\nLAr barrel\n110 k\n\n\n\nLAr end-cap\n64 k\n\n\nHadronic Calorimeter\nTile barrel\n9.8 k\n\n\n\nLAr end-cap\n5.6 k\n\n\n\nLAr forward\n3.5 k\n\n\nMuon spectrometer\nMDTs\n350 k\n\n\n\nCSCs\n31 k\n\n\n\nRPCs\n370 k\n\n\n\nTGCs\n320 k\n\n\nTotal\n\n88 M\n\n\n\nRefer to tables like this:\n[@tbl:atlas_channels] shows some cool things too.\n[@tbl:atlas_channels] shows some cool things too.",
     "crumbs": [
-      "About",
+      "Home",
       "Floats, Figures, and Tables"
     ]
   },
@@ -119,7 +119,7 @@
     "section": "Table of contents per html page",
     "text": "Table of contents per html page\nTo insert a table of contents for a single html page, add the following line to the Markdown, probably near the top of the page as is done for this one.\n&lt;!-- PAGETOC --&gt;",
     "crumbs": [
-      "About",
+      "Home",
       "Floats, Figures, and Tables"
     ]
   },
@@ -130,7 +130,7 @@
     "section": "Clickmore",
     "text": "Clickmore\nYou can hide parts of a document in a heading that needs to be clicked to show more by making a div of class clickmore and a div of class more, linked to eachother like this:\n&lt;div class=\"clickmore\"&gt;&lt;a id=\"link:test1\" class=\"closed\" onclick=\"toggle_more('test1')\"&gt;Click for more details&lt;/a&gt;&lt;/div&gt;\n&lt;div id=\"test1\" class=\"more\"&gt;\n\nLorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque.\nOfficiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip\naccusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax\nan, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed,\nat falli feugiat est.\n\n...\n\n&lt;/div&gt;\nFor example:\n\nClick for more details\n\n\nLorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed, at falli feugiat est.\nNe nonumy quodsi petentium vix, mel ad errem accusata periculis. Porro urbanitas consetetur mei eu, his nisl officiis ei. Ei cum fugit graece, ne qui tantas qualisque voluptaria. Vis ut laoreet euripidis, vix aeque omittam at, vix no cetero volumus. Per te omnium volutpat torquatos, cu vis sumo decore. Eirmod hendrerit an pri.",
     "crumbs": [
-      "About",
+      "Home",
       "Floats, Figures, and Tables"
     ]
   },
@@ -141,7 +141,7 @@
     "section": "",
     "text": "Markdown-memo uses bibtex via pandoc to generate a bibliography for your document. We’ve made this even simpler by allowing the user to create a simple text file to generate the necessary bibtex .bib file using the markdown2bib script. Markdown-memo looks for any bibs/*.txt files and uses markdown2bib to combine them and create bibs/mybib.bib in bibtex format. This is later used by pandoc when creating tex \\(\\rightarrow\\) pdf or html.\nThe bibs/*.txt should be plain text with a single reference per line, with each reference in a style that loosely follows the American Psychological Association (APA), which is commonly used in humanities. Currently four types of references are supported: article, book, incollection, and misc. The journal or book titles need to be in markdown-style emphasis, meaning *Set Within Asterixis*. Also note that for works in a collection, you need to use the word “In” in the right place, like in the reference by Quine below. The rest of the syntax tries to be forgiving. If you want to add a note to appear at the end of the reference, put it at the end within [square brackets] like the work by Plato below.\nFor example, the mybib.txt file in this document is\nATLAS Collaboration. (2008). The ATLAS Experiment at the CERN Large Hadron Collider. *Journal of Instrumentation*, 3, 08003. https://cds.cern.ch/record/1129811\nATLAS Collaboration. (2012). Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC. *Physics Letters B*, 716, 1--29. https://arxiv.org/abs/1207.7214\nFeynman, R.P. (1963). *The Feynman Lectures on Physics, Volume I*. California Institute of Technology. http://www.feynmanlectures.caltech.edu/I_03.html\nFeynman, R.P. (1965). The Development of the Space-Time View of Quantum Electrodynamics. Nobel Lecture, December 11, 1965. http://www.nobelprize.org/nobel_prizes/physics/laureates/1965/feynman-lecture.html\nGuest, D., Collado, J., Baldi, P., Hsu, S. C., Urban, G., & Whiteson, D. (2016). Jet flavor classification in high-energy physics with deep neural networks. *Physical Review D*, 94, 112002. https://arxiv.org/abs/1607.08633\nMiller, A. (2014). Realism. *Stanford Encyclopedia of Philosophy*. http://plato.stanford.edu/entries/realism/\nPlato. (2000). *The Republic*. (G. Ferrari, Ed. & T. Griffith, Trans.). Cambridge University Press. [(Originally written ca. 380 BCE)]\nQuine, W.V.O. (1969). Natural kinds. In *Ontological Relativity and Other Essays* (pp. 114--138). Columbia University Press.\nvan Fraassen, B. (1980). *The Scientific Image*. Oxford University Press.\nIf you do not want to use simplified txt files to generate bibtex, and you want to write your own bibtex, then simply remove any bibs/*.txt files and write a file called bibs/mybib.bib.\nIf you do not need a bibliography, set\ndorefs: false\nin meta.yaml, and then these scripts and programs are not run.",
     "crumbs": [
-      "About",
+      "Home",
       "Bibliographies"
     ]
   },
@@ -152,7 +152,7 @@
     "section": "",
     "text": "Markdown-memo uses bibtex via pandoc to generate a bibliography for your document. We’ve made this even simpler by allowing the user to create a simple text file to generate the necessary bibtex .bib file using the markdown2bib script. Markdown-memo looks for any bibs/*.txt files and uses markdown2bib to combine them and create bibs/mybib.bib in bibtex format. This is later used by pandoc when creating tex \\(\\rightarrow\\) pdf or html.\nThe bibs/*.txt should be plain text with a single reference per line, with each reference in a style that loosely follows the American Psychological Association (APA), which is commonly used in humanities. Currently four types of references are supported: article, book, incollection, and misc. The journal or book titles need to be in markdown-style emphasis, meaning *Set Within Asterixis*. Also note that for works in a collection, you need to use the word “In” in the right place, like in the reference by Quine below. The rest of the syntax tries to be forgiving. If you want to add a note to appear at the end of the reference, put it at the end within [square brackets] like the work by Plato below.\nFor example, the mybib.txt file in this document is\nATLAS Collaboration. (2008). The ATLAS Experiment at the CERN Large Hadron Collider. *Journal of Instrumentation*, 3, 08003. https://cds.cern.ch/record/1129811\nATLAS Collaboration. (2012). Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC. *Physics Letters B*, 716, 1--29. https://arxiv.org/abs/1207.7214\nFeynman, R.P. (1963). *The Feynman Lectures on Physics, Volume I*. California Institute of Technology. http://www.feynmanlectures.caltech.edu/I_03.html\nFeynman, R.P. (1965). The Development of the Space-Time View of Quantum Electrodynamics. Nobel Lecture, December 11, 1965. http://www.nobelprize.org/nobel_prizes/physics/laureates/1965/feynman-lecture.html\nGuest, D., Collado, J., Baldi, P., Hsu, S. C., Urban, G., & Whiteson, D. (2016). Jet flavor classification in high-energy physics with deep neural networks. *Physical Review D*, 94, 112002. https://arxiv.org/abs/1607.08633\nMiller, A. (2014). Realism. *Stanford Encyclopedia of Philosophy*. http://plato.stanford.edu/entries/realism/\nPlato. (2000). *The Republic*. (G. Ferrari, Ed. & T. Griffith, Trans.). Cambridge University Press. [(Originally written ca. 380 BCE)]\nQuine, W.V.O. (1969). Natural kinds. In *Ontological Relativity and Other Essays* (pp. 114--138). Columbia University Press.\nvan Fraassen, B. (1980). *The Scientific Image*. Oxford University Press.\nIf you do not want to use simplified txt files to generate bibtex, and you want to write your own bibtex, then simply remove any bibs/*.txt files and write a file called bibs/mybib.bib.\nIf you do not need a bibliography, set\ndorefs: false\nin meta.yaml, and then these scripts and programs are not run.",
     "crumbs": [
-      "About",
+      "Home",
       "Bibliographies"
     ]
   },
@@ -161,20 +161,9 @@
     "href": "bibliographies.html#doing-citations",
     "title": "Bibliographies",
     "section": "Doing citations",
-    "text": "Doing citations\nCitations start with an @-sign, and can be used inline, like:\n@Miller_2014_Realism argues that we should get real.\nwhich produces:\n@Miller_2014_Realism argues that we should get real.\nInside a caption, you may want to end it with the citation in parentheses like this:\nBlah blah blah [@Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I]\\.\nwhich produces:\nBlah blah blah [@Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I].\nTypically, I find it better to leave citations1 in footnotes to keep from cluttering the main text. Let’s try citing various kinds of references. Feynman said some important things2. But everything is a footnote to Plato3. Van4 is a cool cat too. A reference with more than 4 authors should be automatically shortened with et al.5\nIn order for a References section to be generated per html page, you need to add a special html comment near the end of your Markdown file for that page:\n&lt;!-- REFERENCES --&gt;\nPages without such a comment will not get an automatic References section, but the complete pdf document will automatically still have a complete References section at the end as long as\ndorefs: true\nis set in meta.yaml.",
+    "text": "Doing citations\nCitations start with an @-sign, and can be used inline, like:\n@Miller_2014_Realism argues that we should get real.\nwhich produces:\nMiller (2014) argues that we should get real.\n\nMiller, A. 2014. “Realism.” Stanford Encyclopedia of Philosophy. http://plato.stanford.edu/entries/realism/.\nInside a caption, you may want to end it with the citation in parentheses like this:\nBlah blah blah [@Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I]\\.\nwhich produces:\nBlah blah blah (Feynman 1963).\n\nFeynman, R. P. 1963. The Feynman Lectures on Physics, Volume I. California Institute of Technology. http://www.feynmanlectures.caltech.edu/I_03.html.\n1 Quine (1969).\nQuine, W. V. O. 1969. “Natural kinds.” In Ontological Relativity and Other Essays, 114–38. Columbia University Press.\n2 Feynman (1965).\n———. 1965. “The Development of the Space-Time View of Quantum Electrodynamics.” Nobel Lecture, December 11, 1965. http://www.nobelprize.org/nobel_prizes/physics/laureates/1965/feynman-lecture.html.\n3 Plato (2000).\nPlato. 2000. The Republic. Edited by G. Ferrari. Translated by T. Griffith. Cambridge University Press.\n4 van Fraassen (1980).\nFraassen, B. van. 1980. The Scientific Image. Oxford University Press.\n5 Guest, D. et al. (2016).\nGuest, D. et al. 2016. “Jet flavor classification in high-energy physics with deep neural networks.” Physical Review D 94: 112002. https://arxiv.org/abs/1607.08633.\nTypically, I find it better to leave citations1 in footnotes to keep from cluttering the main text. Let’s try citing various kinds of references. Feynman said some important things2. But everything is a footnote to Plato3. Van4 is a cool cat too. A reference with more than 4 authors should be automatically shortened with et al.5\nIn order for a References section to be generated per html page, you need to add a special html comment near the end of your Markdown file for that page:\n&lt;!-- REFERENCES --&gt;\nPages without such a comment will not get an automatic References section, but the complete pdf document will automatically still have a complete References section at the end as long as\ndorefs: true\nis set in meta.yaml.",
     "crumbs": [
-      "About",
-      "Bibliographies"
-    ]
-  },
-  {
-    "objectID": "bibliographies.html#footnotes",
-    "href": "bibliographies.html#footnotes",
-    "title": "Bibliographies",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\n@Quine_1969_Natural_kinds.↩︎\n@Feynman_1965_The_Development_of_the_Space_Time_View_of_Quantum.↩︎\n@Plato_2000_The_Republic.↩︎\n@vanFraassen_1980_The_Scientific_Image.↩︎\n@Guest_2016_Jet_flavor_classification_in_high_energy_physics.↩︎",
-    "crumbs": [
-      "About",
+      "Home",
       "Bibliographies"
     ]
   },
@@ -185,7 +174,7 @@
     "section": "",
     "text": "Here we review the basics of Markdown. A further reference on Markdown syntax by its creator is here.",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   },
@@ -196,7 +185,7 @@
     "section": "Sections",
     "text": "Sections\nAre markded like this:\nSection title {#sec:put-optional-section-label-here}\n===============================================================================\n\nSub-section title {#sec:put-optional-sub-section-label-here}\n-------------------------------------------------------------------------------\nOr marked like this:\n# Section title {#sec:put-optional-section-label-here}\n\n## Sub-section title {#sec:put-optional-sub-section-label-here}\n\n### Sub-sub-section title\n\nMain text here.\nNote the examples of labeling a section in braces with #, as shown above. This allows one to refer to labels in the text like:\nThe next section, [@sec:lists], is about lists.\nThe next section, [@sec:lists], is about lists.",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   },
@@ -207,7 +196,7 @@
     "section": "Lists",
     "text": "Lists\nUnnumbered lists like this:\n-   Galileo Galilei\n-   Robert G. Ingersoll\n-   Jill Tarter\n\nGalileo Galilei\nRobert G. Ingersoll\nJill Tarter\n\nNumbered lists like this:\n1.  Na&iuml;ve realists\n1.  Scientific realists\n1.  Constructive empiricists\n1.  Positivists\n1.  Relativists\n\nNaïve realists\nScientific realists\nConstructive empiricists\nPositivists\nRelativists",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   },
@@ -218,7 +207,7 @@
     "section": "Blocks",
     "text": "Blocks\nThe following is a quote block.\n&gt;   It ain't what you don't know that gets you into trouble.\n&gt;   It's what you know for sure that just ain't so.  \n\n-- Mark Twain\n\nIt ain’t what you don’t know that gets you into trouble. It’s what you know for sure that just ain’t so.\n\n– Mark Twain\nA code block (used throughout these examples) is just indented with 4 spaces, like this:\n    def bubble_sort(alist):\n        exchanges = True\n        passnum = len(alist)-1\n        while passnum &gt; 0 and exchanges:\n           exchanges = False\n           for i in range(passnum):\n               if alist[i]&gt;alist[i+1]:\n                   exchanges = True\n                   temp = alist[i]\n                   alist[i] = alist[i+1]\n                   alist[i+1] = temp\n           passnum = passnum-1\n\n    alist=[20,30,40,90,50,60,70,80,100,110]\n    bubble_sort(alist)\n    print(alist)\nwhich makes:\ndef bubble_sort(alist):\n    exchanges = True\n    passnum = len(alist)-1\n    while passnum &gt; 0 and exchanges:\n       exchanges = False\n       for i in range(passnum):\n           if alist[i]&gt;alist[i+1]:\n               exchanges = True\n               temp = alist[i]\n               alist[i] = alist[i+1]\n               alist[i+1] = temp\n       passnum = passnum-1\n\nalist=[20,30,40,90,50,60,70,80,100,110]\nbubble_sort(alist)\nprint(alist)\nMaybe you want to refer to code inline like this with backticks:\nHere's some inline code: `vec.push_back(3.14)`.\nHere’s some inline code: vec.push_back(3.14).\nFor poems and the like where you want linebreaks taken literally, prepend lines with | and a single space. Additional spaces can be used, but will indent the output.\n| Art is long,\n| Life is short,\n| Opportunity fleeting,\n| Experiment dangerous,\n| Judgment difficult.\nArt is long,\nLife is short,\nOpportunity fleeting,\nExperiment dangerous,\nJudgment difficult.\nOtherwise, one can put two or more spaces at the end of a line of Markdown for the linebreak to be taken literally\nlike\nthis.\nA horizontal rule can be made by just writing some number of dashes:\n----------------------------------------------------\n\nBoom.",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   },
@@ -229,7 +218,7 @@
     "section": "Fonts",
     "text": "Fonts\n-   *This is emphasis.*\n-   **This is bold.**\n-   _This is also emphasis._\n-   __This is also bold.__\n-   _This is emphasis **and** bold._\n-   __This is bold *and* emphasis.__\n-   ~~This is struck-out.~~\nproduces:\n\nThis is emphasis.\nThis is bold.\nThis is also emphasis.\nThis is also bold.\nThis is emphasis and bold.\nThis is bold and emphasis.\nThis is struck-out.\n\nDon’t do these. These will work in LaTeX () but may not in html.\n-   \\textsf{This should be Sans.}\n-   \\textsc{This Should BE SMALL caps.}\n-   $\\textsf{This works though!}$\n-   $\\textsc{But this does not!}$",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   },
@@ -240,7 +229,7 @@
     "section": "Links and labels",
     "text": "Links and labels\nLinks to URLs are done like this:\n[Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)\nLorem ipsum\nor used directly like this:\n&lt;https://www.google.com&gt;\nhttps://www.google.com\nWhen referring to labeled sections/figures/tables, you do not include the literal word “Section”, “Figure”, or “Table”, which will be included for you. These prefixes/words are configurable in the meta.yaml file.\nRefer to labeled things like this:\n\nfor sections: See [@sec:footnotes] on footnotes.\nSee [@sec:footnotes] on footnotes.\nfor figures: [@fig:scientific_universe] motivates the unity of science.\n[@fig:scientific_universe] motivates the unity of science.\nfor tables: Numbers are in [@tbl:atlas_channels].\nNumbers are in [@tbl:atlas_channels].\nfor equations: The generalized Stokes' theorem, [@eq:stokes], is rad.\nThe generalized Stokes’ theorem, [@eq:stokes], is rad.\n\nTODO: The above references to labels on other pages unfortunately don’t work in html, but they work in latex/pdf.\nYou can refer to multiple lables like [@sec:sections;@sec:lists;@sec:blocks] like this:\n[@sec:sections;@sec:lists;@sec:blocks]\nAutomatic grouping into a range doesn’t seem to be working (for latex, but does for html), so you can also try refer to [Sections @sec:sections]–[-@sec:blocks] in some versions like this:\n[Sections @sec:sections]--[-@sec:blocks]",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   },
@@ -251,7 +240,7 @@
     "section": "Footnotes",
     "text": "Footnotes\nHere's how you do a footnote[^SomeSpecialNote].\n\n[^SomeSpecialNote]: Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque.\n    Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip\n    accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax\n    an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed,\n    at falli feugiat est.\nproduces:\nHere’s how you do a footnote1.",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   },
@@ -262,7 +251,7 @@
     "section": "Footnotes",
     "text": "Footnotes\n\n\nLorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed, at falli feugiat est.↩︎",
     "crumbs": [
-      "About",
+      "Home",
       "Basics"
     ]
   }

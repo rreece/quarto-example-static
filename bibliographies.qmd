@@ -1,10 +1,11 @@
 ---
 title: "Bibliographies"
 date: today
+reference-location: margin
+citation-location: margin
+bibliography: bibs/mybib.bib
 ---
 
-
-<!-- PAGETOC -->
 
 Making a bibliography
 -------------------------------------------------------------------------------
@@ -106,4 +107,3 @@ is set in `meta.yaml`.
 [^vanFraassen1980]: @vanFraassen_1980_The_Scientific_Image\.
 
 
-<!-- REFERENCES -->

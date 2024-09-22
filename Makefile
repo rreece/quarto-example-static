@@ -4,14 +4,28 @@ PRINT = @echo '==>  '
 
 QMD_FILES := $(wildcard *.qmd)
 #HTML_FILES := $(QMD_FILES:%.qmd=%.html)
+BIB_TXT_FILES := $(sort $(wildcard bibs/*.txt))
 
 .PHONY: all html clean realclean
 
 all: html
 
-html:
+html: bibs/mybib.bib _quarto.yml
 	quarto render --to html
 	$(PRINT) "html done."
+
+
+## create bibs/mybib.bib from bibs/*.txt
+bibs/mybib.bib: $(BIB_TXT_FILES)
+	@if [ -z "$(BIB_TXT_FILES)" ] ; \
+	then \
+		echo "==>   ERROR: No bibliography files found in bibs/." ; \
+		exit 1 ; \
+	else \
+		python scripts/markdown2bib.py --out=bibs/mybib.bib $(BIB_TXT_FILES) ; \
+	fi
+	$(PRINT) "make $@ done."
+
 
 JUNK = *.log
 OUTS = docs
