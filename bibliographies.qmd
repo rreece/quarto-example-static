@@ -1,9 +1,6 @@
 ---
 title: "Bibliographies"
 date: today
-reference-location: margin
-citation-location: margin
-bibliography: bibs/mybib.bib
 ---
 
 
@@ -105,5 +102,6 @@ is set in `meta.yaml`.
 [^Plato2000]: @Plato_2000_The_Republic\.
 [^Quine1969]: @Quine_1969_Natural_kinds\.
 [^vanFraassen1980]: @vanFraassen_1980_The_Scientific_Image\.
+
 
 

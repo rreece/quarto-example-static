@@ -3,12 +3,19 @@
 PRINT = @echo '==>  '
 
 QMD_FILES := $(wildcard *.qmd)
-#HTML_FILES := $(QMD_FILES:%.qmd=%.html)
+HTML_FILES := $(QMD_FILES:%.qmd=%.html)
 BIB_TXT_FILES := $(sort $(wildcard bibs/*.txt))
 
 .PHONY: all html clean realclean
 
 all: html
+
+#html: $(HTML_FILES)
+#
+## create html
+#%.html: %.qmd _quarto.yml bibs/mybib.bib
+#	quarto render $< --to html
+#	$(PRINT) "make $@ done."
 
 html: bibs/mybib.bib _quarto.yml
 	quarto render --to html

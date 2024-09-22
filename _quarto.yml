@@ -4,6 +4,19 @@ project:
 
 website:
   title: "Quarto Static Example"
+
+#  image: "quarto-dark-bg.jpeg"
+#  favicon: "favicon.png"
+#  google-analytics: "G-FV9Z7SDZ0M"
+#  open-graph: true
+#  twitter-card: true
+#  site-url: https://quarto.org
+#  repo-url: https://github.com/quarto-dev/quarto-web
+#  issue-url: https://github.com/quarto-dev/quarto-cli/issues/new/choose
+#  repo-actions: [edit, issue]
+#  page-navigation: true
+#  bread-crumbs: tru
+
   navbar:
     search: true
     left:
@@ -27,16 +40,26 @@ website:
 
 format:
   html:
-    theme: flatly
+    theme:
+      light: flatly
+      dark: darkly
     toc: true
     toc-depth: 2
     toc-location: left
-    fontsize: 1.2em
+    fontsize: 1.1em
     code-fold: true
     self-contained: true
     grid:
-      margin-width: 350px
+      sidebar-width: 250px
+      body-width: 800px
+      margin-width: 300px
+      gutter-width: 1.5em
     html-math-method: mathjax
+
+bibliography: bibs/mybib.bib
+csl: templates/apa-no-doi-no-issue-with-notes.csl
+reference-location: margin
+citation-location: document
 
 execute:
   eval: false
