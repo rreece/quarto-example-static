@@ -1,5 +1,6 @@
 project:
   type: website
+#  type: book
   output-dir: docs
 
 website:
@@ -45,8 +46,8 @@ format:
       dark: darkly
     toc: true
     toc-depth: 2
-    toc-location: left
 #    toc-title: "Contents"
+    toc-location: left
 #    toc-expand: 1
     fontsize: 1.1em
     code-fold: true
@@ -62,6 +63,22 @@ format:
     citations-hover: true
     footnotes-hover: true
     crossrefs-hover: true
+
+#  pdf:
+#    documentclass: scrartcl
+##    documentclass: memoir
+##    papersize: letter
+#    toc: true
+#    toc-depth: 2
+#    toc-title: "Contents"
+#    number-sections: true
+#    colorlinks: true
+#    include-in-header:
+#      - text: |
+#          \usepackage{xparse}
+#
+#pdf-engine: pdflatex
+#latex-tinytex: true
 
 crossref:
   fig-title: "Figure"

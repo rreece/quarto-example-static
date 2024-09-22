@@ -6,7 +6,7 @@ QMD_FILES := $(wildcard *.qmd)
 HTML_FILES := $(QMD_FILES:%.qmd=docs/%.html)
 BIB_TXT_FILES := $(sort $(wildcard bibs/*.txt))
 
-.PHONY: all html project_html publish clean realclean
+.PHONY: all html project_html pdf publish clean realclean
 
 all: html
 
@@ -25,6 +25,10 @@ all: html
 html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
 	quarto render --to html
 	$(PRINT) "html done."
+
+pdf: $(QMD_FILES) _quarto.yml bibs/mybib.bib
+	quarto render --to pdf
+	$(PRINT) "pdf done."
 
 
 ## create bibs/mybib.bib from bibs/*.txt
