@@ -1,4 +1,4 @@
-# quarto-example
+# quarto-example-static
 
 My first example of using quarto, following the quarto
 [Get Started](https://quarto.org/docs/get-started/hello/text-editor.html).
@@ -10,6 +10,27 @@ the pages to Github Pages.
 
 You can see the rendered website here:        
 <https://rreece.github.io/quarto-example-static/>
+
+
+## Build
+
+Just call
+
+```
+make
+```
+
+Preview the output:
+
+```
+open docs/index.html
+```
+
+When ready, commit to github:
+
+```
+git commit -a -m "update" ; git push origin mybranch
+```
 
 
 ## See also
