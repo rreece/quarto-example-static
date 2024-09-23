@@ -115,7 +115,7 @@ format:
     footnotes-hover: true
     crossrefs-hover: true
     highlight-style: "github"
-    code-block-bg: "CCCCCC"
+    code-block-bg: "#CCCCCC"
 
   pdf:
     documentclass: scrreprt
