@@ -8,31 +8,27 @@ BIB_TXT_FILES := $(sort $(wildcard bibs/*.txt))
 
 .PHONY: all html project_html pdf publish clean realclean
 
-all: html
+all: project_html
 
 ## create html
-#html: $(HTML_FILES)
+html: $(HTML_FILES)
 
 #%.html: %.qmd _quarto.yml bibs/mybib.bib
 #	quarto render $< --to html
 #	$(PRINT) "make $@ done."
 
-#docs/%.html: %.qmd _quarto.yml bibs/mybib.bib
-#	quarto render $< --to html
-#	$(PRINT) "make $@ done."
-#
-#
-#project_html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
-#	quarto render --to html
-#	$(PRINT) "html done."
+docs/%.html: %.qmd _quarto.yml bibs/mybib.bib
+	quarto render $< --to html --quiet
+	$(PRINT) "make $@ done."
 
-html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
+
+project_html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
 	quarto render --to html
-	$(PRINT) "html done."
+	$(PRINT) "make $@ done."
 
 pdf: $(QMD_FILES) _quarto.yml bibs/mybib.bib
 	quarto render --to pdf
-	$(PRINT) "pdf done."
+	$(PRINT) "make $@ done."
 
 
 ## create bibs/mybib.bib from bibs/*.txt

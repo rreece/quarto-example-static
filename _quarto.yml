@@ -98,6 +98,8 @@ format:
     toc-title: "Contents"
     toc-location: left
 #    toc-expand: 1
+    number-sections: true
+    #number-depth: 3
     fontsize: 1.1em
     code-fold: true
     self-contained: true
@@ -112,21 +114,22 @@ format:
     citations-hover: true
     footnotes-hover: true
     crossrefs-hover: true
-    highlight-style: github
+    highlight-style: "github"
+    code-block-bg: "CCCCCC"
 
   pdf:
-#    documentclass: scrartcl
     documentclass: scrreprt
-#    documentclass: memoir
     papersize: letter
     toc: true
     toc-depth: 2
     toc-title: "Contents"
     number-sections: true
+    #number-depth: 3
     colorlinks: true
-    include-in-header:
-      - text: |
-          \usepackage{xparse}
+#    include-in-header:
+#      - text: |
+#          \PassOptionsToPackage{strict}{changepage}
+#          \usepackage{changepage}
 
 pdf-engine: pdflatex
 latex-tinytex: true
@@ -137,8 +140,6 @@ crossref:
   eq-prefix: "eq."
   title-delim: ":"
 
-number-sections: true
-#number-depth: 3
 
 bibliography: bibs/mybib.bib
 csl: templates/apa-no-doi-no-issue-with-notes.csl
