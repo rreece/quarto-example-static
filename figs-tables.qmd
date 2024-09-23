@@ -122,6 +122,21 @@ This shows how to write [callout blocks](https://quarto.org/docs/authoring/callo
 
 For example:
 
+::: {.callout-note}
+## Pale grey lore
+
+The lore of our fathers is a fabric of sentences. In our hands it develops
+and changes, through more or less arbitrary and deliberate revisions and
+additions of our own, more or less directly occasioned by the continuing
+stimulation of our sense organs. It is a pale grey lore, black with fact
+and white with convention. But I have found no substantial reasons for
+concluding that there are any quite black threads in it, or any white
+ones. [^Quine1960p374]
+
+:::
+
+And collapsed versions:
+
 ::: {.callout-caution collapse="true"}
 ## Expand To Learn About Collapse
 
@@ -136,4 +151,5 @@ an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed,
 at falli feugiat est.
 :::
 
+[^Quine1960p374]: @Quine_1960_Carnap_and_logical_truth\, p. 374.
 

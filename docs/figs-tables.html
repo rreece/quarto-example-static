@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-09-22">
+<meta name="dcterms.date" content="2024-09-23">
 
 <title>5&nbsp; Floats, Figures, and Tables – Quarto Static Example</title>
 <style>
@@ -125,7 +125,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -228,7 +228,7 @@ window.Quarto = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -243,7 +243,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 22, 2024</p>
+      <p class="date">September 23, 2024</p>
     </div>
   </div>
   
@@ -410,12 +410,26 @@ Table&nbsp;5.1: Approximate number of readout channels per sub-detector in ATLAS
 <pre><code>@tbl-atlas-channels shows some cool things too.</code></pre>
 <p><a href="#tbl-atlas-channels" class="quarto-xref">Table&nbsp;<span>5.1</span></a> shows some cool things too.</p>
 </section>
-<section id="callout-blocks" class="level2" data-number="5.3">
+<section id="callout-blocks" class="level2 page-columns page-full" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="callout-blocks"><span class="header-section-number">5.3</span> Callout blocks</h2>
 <p>This shows how to write <a href="https://quarto.org/docs/authoring/callouts.html">callout blocks</a>.</p>
 <p>For example:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pale grey lore
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The lore of our fathers is a fabric of sentences. In our hands it develops and changes, through more or less arbitrary and deliberate revisions and additions of our own, more or less directly occasioned by the continuing stimulation of our sense organs. It is a pale grey lore, black with fact and white with convention. But I have found no substantial reasons for concluding that there are any quite black threads in it, or any white ones. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<span class="citation" data-cites="Quine_1960_Carnap_and_logical_truth">Quine (<a href="references.html#ref-Quine_1960_Carnap_and_logical_truth" role="doc-biblioref">1960</a>)</span>, p.&nbsp;374.</p></div></div><p>And collapsed versions:</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -424,7 +438,7 @@ Expand To Learn About Collapse
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This is an example of a ‘folded’ caution callout that can be expanded by the user. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
 <p>Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed, at falli feugiat est.</p>
@@ -440,8 +454,12 @@ ATLAS Collaboration. (2008). <span class="nocase">The ATLAS Experiment at the CE
 <div id="ref-ATLAS_2012_Observation_of_a_new_particle_in_the_search" class="csl-entry" role="listitem">
 ———. (2012). <span class="nocase">Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC.</span> <em>Physics Letters B</em>, <em><span>716</span></em>, 1–29. <a href="https://arxiv.org/abs/1207.7214">https://arxiv.org/abs/1207.7214</a>
 </div>
+<div id="ref-Quine_1960_Carnap_and_logical_truth" class="csl-entry" role="listitem">
+Quine, W. V. O. (1960). <span class="nocase">Carnap and logical truth.</span> <em>Synthese</em>, <em><span>12</span></em>, 350–374.
+</div>
 </div>
 </section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

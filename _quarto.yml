@@ -29,6 +29,7 @@ book:
     tools:
       - icon: github
         href: https://github.com/rreece/quarto-example-static
+#    footer: "Copyright\n&copy; 2024 Ryan Reece"
 
 #  navbar:
 #    search: true
