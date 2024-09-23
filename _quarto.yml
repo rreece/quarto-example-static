@@ -1,7 +1,55 @@
 project:
-  type: website
-#  type: book
+#  type: website
+  type: book
   output-dir: docs
+
+book:
+  title: "Quarto Static Example"
+  author: "Ryan Reece"
+  date: today
+  cover-image: img/The-Scream-Munch1893.png
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - basics.qmd
+    - bibliographies.qmd
+    - math.qmd
+    - figs-tables.qmd
+    - jupyter.qmd
+    - references.qmd
+  page-navigation: true
+#  search: true
+#  repo-url: https://github.com/rreece/quarto-example-static
+
+  sidebar:
+    style: "docked"
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/rreece/quarto-example-static
+#      - icon: twitter
+#        href: https://x.com/RyanDavidReece
+
+#  navbar:
+#    search: true
+#    left:
+#      - text: "Home"
+#        href: index.qmd
+#      - about.qmd
+#    right:
+#      - icon: twitter
+#        href: https://x.com/RyanDavidReece
+#        aria-label: Twitter
+#      - icon: github
+#        href: https://github.com/rreece/quarto-example-static
+#        aria-label: GitHub
+
+  page-footer:
+    left:
+      - "Copyright &copy; 2024 Ryan Reece"
+    center:
+      - text: "About"
+        href: about.qmd
 
 website:
   title: "Quarto Static Example"
@@ -29,6 +77,7 @@ website:
         href: https://x.com/RyanDavidReece
       - icon: github
         href: https://github.com/rreece/quarto-example-static
+
   sidebar:
     style: "docked"
     contents:
@@ -46,7 +95,7 @@ format:
       dark: darkly
     toc: true
     toc-depth: 2
-#    toc-title: "Contents"
+    toc-title: "Contents"
     toc-location: left
 #    toc-expand: 1
     fontsize: 1.1em
@@ -63,22 +112,24 @@ format:
     citations-hover: true
     footnotes-hover: true
     crossrefs-hover: true
+    highlight-style: github
 
-#  pdf:
+  pdf:
 #    documentclass: scrartcl
-##    documentclass: memoir
-##    papersize: letter
-#    toc: true
-#    toc-depth: 2
-#    toc-title: "Contents"
-#    number-sections: true
-#    colorlinks: true
-#    include-in-header:
-#      - text: |
-#          \usepackage{xparse}
-#
-#pdf-engine: pdflatex
-#latex-tinytex: true
+    documentclass: scrreprt
+#    documentclass: memoir
+    papersize: letter
+    toc: true
+    toc-depth: 2
+    toc-title: "Contents"
+    number-sections: true
+    colorlinks: true
+    include-in-header:
+      - text: |
+          \usepackage{xparse}
+
+pdf-engine: pdflatex
+latex-tinytex: true
 
 crossref:
   fig-title: "Figure"

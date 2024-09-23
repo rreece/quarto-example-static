@@ -12,7 +12,11 @@ all: html
 
 ## create html
 #html: $(HTML_FILES)
-#
+
+#%.html: %.qmd _quarto.yml bibs/mybib.bib
+#	quarto render $< --to html
+#	$(PRINT) "make $@ done."
+
 #docs/%.html: %.qmd _quarto.yml bibs/mybib.bib
 #	quarto render $< --to html
 #	$(PRINT) "make $@ done."

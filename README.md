@@ -29,6 +29,13 @@ Installation:
 TODO
 
 
+Note these quarto issues
+----------------------------------
+
+-   https://github.com/quarto-dev/quarto-cli/issues/2275
+-   https://github.com/quarto-dev/quarto-cli/discussions/10477
+
+
 See also
 ----------------------------------
 
