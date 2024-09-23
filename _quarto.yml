@@ -2,12 +2,12 @@ project:
 #  type: website
   type: book
   output-dir: docs
+#  execute-dir: file
 
 book:
   title: "Quarto Static Example"
   author: "Ryan Reece"
   date: today
-  cover-image: img/The-Scream-Munch1893.png
   chapters:
     - index.qmd
     - intro.qmd
@@ -17,18 +17,18 @@ book:
     - figs-tables.qmd
     - jupyter.qmd
     - references.qmd
+
   page-navigation: true
+  cover-image: img/The-Scream-Munch1893.png
 #  search: true
 #  repo-url: https://github.com/rreece/quarto-example-static
 
   sidebar:
-    style: "docked"
+    style: docked
     search: true
     tools:
       - icon: github
         href: https://github.com/rreece/quarto-example-static
-#      - icon: twitter
-#        href: https://x.com/RyanDavidReece
 
 #  navbar:
 #    search: true
@@ -37,12 +37,12 @@ book:
 #        href: index.qmd
 #      - about.qmd
 #    right:
-#      - icon: twitter
-#        href: https://x.com/RyanDavidReece
-#        aria-label: Twitter
 #      - icon: github
 #        href: https://github.com/rreece/quarto-example-static
 #        aria-label: GitHub
+#      - icon: twitter
+#        href: https://x.com/RyanDavidReece
+#        aria-label: Twitter
 
   page-footer:
     left:
@@ -54,6 +54,7 @@ book:
 website:
   title: "Quarto Static Example"
 
+  page-navigation: true
 #  image: "quarto-dark-bg.jpeg"
 #  favicon: "favicon.png"
 #  google-analytics: "G-FV9Z7SDZ0M"
@@ -63,30 +64,35 @@ website:
 #  repo-url: https://github.com/quarto-dev/quarto-web
 #  issue-url: https://github.com/quarto-dev/quarto-cli/issues/new/choose
 #  repo-actions: [edit, issue]
-#  page-navigation: true
 #  bread-crumbs: tru
 
-  navbar:
-    search: true
-    left:
-      - text: "Home"
-        href: index.qmd
-      - about.qmd
-    tools:
-      - icon: twitter
-        href: https://x.com/RyanDavidReece
-      - icon: github
-        href: https://github.com/rreece/quarto-example-static
+#  navbar:
+#    search: true
+#    left:
+#      - text: "Home"
+#        href: index.qmd
+#      - about.qmd
+#    tools:
+#      - icon: github
+#        href: https://github.com/rreece/quarto-example-static
+#      - icon: twitter
+#        href: https://x.com/RyanDavidReece
 
   sidebar:
-    style: "docked"
+    style: docked
+    search: true
     contents:
+      - index.qmd
       - intro.qmd
       - basics.qmd
       - bibliographies.qmd
       - math.qmd
       - figs-tables.qmd
       - jupyter.qmd
+      - references.qmd
+    tools:
+      - icon: github
+        href: https://github.com/rreece/quarto-example-static
 
 format:
   html:
@@ -97,12 +103,11 @@ format:
     toc-depth: 2
     toc-title: "Contents"
     toc-location: left
-#    toc-expand: 1
+    #toc-expand: 1
     number-sections: true
     #number-depth: 3
     fontsize: 1.1em
     code-fold: true
-    self-contained: true
     grid:
       sidebar-width: 250px
       body-width: 800px
@@ -116,6 +121,9 @@ format:
     crossrefs-hover: true
     highlight-style: "github"
     code-block-bg: "#CCCCCC"
+    self-contained: false
+    embed-resources: false
+    self-contained-math: false
 
   pdf:
     documentclass: scrreprt
@@ -126,10 +134,6 @@ format:
     number-sections: true
     #number-depth: 3
     colorlinks: true
-#    include-in-header:
-#      - text: |
-#          \PassOptionsToPackage{strict}{changepage}
-#          \usepackage{changepage}
 
 pdf-engine: pdflatex
 latex-tinytex: true
