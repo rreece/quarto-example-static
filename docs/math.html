@@ -264,7 +264,16 @@ $$ {#eq-maxwell}</code></pre>
     \nabla \times \vec{B} &amp;= \vec{j} + \frac{\partial \vec{E}}{\partial t} \nonumber \,.
 \end{align}
 \tag{4.3}\]</span></span></p>
-<p>NOTE: The above equation doesn’t work when making a pdf. See <a href="https://github.com/quarto-dev/quarto-cli/issues/2275">this issue</a>.</p>
+<p>NOTE: The above equation doesn’t work when making a pdf. See <a href="https://github.com/quarto-dev/quarto-cli/issues/2275">this issue</a>. Instead, for pdf we do the following with <a href="https://quarto.org/docs/authoring/conditional.html">quarto conditional content</a>:</p>
+<pre><code>::: {.content-visible when-format="pdf"}
+\begin{align}
+    \nabla \cdot  \vec{E} &amp;= \rho \nonumber \\
+    \nabla \cdot  \vec{B} &amp;= 0    \nonumber \\
+    \nabla \times \vec{E} &amp;= - \frac{\partial \vec{B}}{\partial t} \label{eq-maxwell} \\
+    \nabla \times \vec{B} &amp;= \vec{j} + \frac{\partial \vec{E}}{\partial t} \nonumber \,. 
+\end{align}
+:::</code></pre>
+<p>But notice that the previous time I refrenced Maxwell’s equations (<a href="#eq-maxwell" class="quarto-xref">eq.&nbsp;<span>4.3</span></a>), and this time, the reference works for html but is broken in pdf.</p>
 </section>
 <section id="mathjax" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="mathjax"><span class="header-section-number">4.2</span> Mathjax</h2>

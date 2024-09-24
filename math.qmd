@@ -42,6 +42,7 @@ Maxwell's equations, @eq-maxwell, are also tough to beat:
     \end{align}
     $$ {#eq-maxwell}
 
+::: {.content-visible when-format="html"}
 $$
 \begin{align}
     \nabla \cdot  \vec{E} &= \rho \nonumber \\
@@ -50,9 +51,33 @@ $$
     \nabla \times \vec{B} &= \vec{j} + \frac{\partial \vec{E}}{\partial t} \nonumber \,. 
 \end{align}
 $$ {#eq-maxwell}
+:::
 
 NOTE: The above equation doesn't work when making a pdf.
 See [this issue](https://github.com/quarto-dev/quarto-cli/issues/2275).
+Instead, for pdf we do the following with
+[quarto conditional content](https://quarto.org/docs/authoring/conditional.html):
+
+    ::: {.content-visible when-format="pdf"}
+    \begin{align}
+        \nabla \cdot  \vec{E} &= \rho \nonumber \\
+        \nabla \cdot  \vec{B} &= 0    \nonumber \\
+        \nabla \times \vec{E} &= - \frac{\partial \vec{B}}{\partial t} \label{eq-maxwell} \\
+        \nabla \times \vec{B} &= \vec{j} + \frac{\partial \vec{E}}{\partial t} \nonumber \,. 
+    \end{align}
+    :::
+
+::: {.content-visible when-format="pdf"}
+\begin{align}
+    \nabla \cdot  \vec{E} &= \rho \nonumber \\
+    \nabla \cdot  \vec{B} &= 0    \nonumber \\
+    \nabla \times \vec{E} &= - \frac{\partial \vec{B}}{\partial t} \label{eq-maxwell} \\
+    \nabla \times \vec{B} &= \vec{j} + \frac{\partial \vec{E}}{\partial t} \nonumber \,. 
+\end{align}
+:::
+
+But notice that the previous time I refrenced Maxwell's equations (@eq-maxwell),
+and this time, the reference works for html but is broken in pdf.
 
 
 Mathjax
