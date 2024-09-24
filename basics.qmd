@@ -120,6 +120,40 @@ which makes:
     bubble_sort(alist)
     print(alist)
 
+Or you can wrapp code blocks in three backticks, without indenting:
+
+    ```
+    def online_covariance(data1, data2):
+        meanx = meany = C = n = 0
+        for x, y in zip(data1, data2):
+            n += 1
+            dx = x - meanx
+            meanx += dx / n
+            meany += (y - meany) / n
+            C += dx * (y - meany)
+    
+        population_covar = C / n
+        # Bessel's correction for sample variance
+        sample_covar = C / (n - 1)
+    ```
+
+which makes:
+
+```
+def online_covariance(data1, data2):
+    meanx = meany = C = n = 0
+    for x, y in zip(data1, data2):
+        n += 1
+        dx = x - meanx
+        meanx += dx / n
+        meany += (y - meany) / n
+        C += dx * (y - meany)
+
+    population_covar = C / n
+    # Bessel's correction for sample variance
+    sample_covar = C / (n - 1)
+```
+
 Maybe you want to refer to **code inline** like this with backticks:
 
     Here's some inline code: `vec.push_back(3.14)`.
