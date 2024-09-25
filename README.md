@@ -3,6 +3,14 @@ quarto-example-static
 
 [![pages deployment](https://github.com/rreece/quarto-example-static/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rreece/quarto-example-static/actions/workflows/pages/pages-build-deployment)
 
+------------
+
+**THIS REPO IS DEPRECATED BY:**
+
+[rreece/quarto-example](https://github.com/rreece/quarto-example)
+
+------------
+
 Easy way to compile markdown into documents.
 
 This project is meant to make writing easier and more productive.
@@ -47,7 +55,7 @@ Just call `make pdf`
 TODOs
 ----------------------------------
 
-- [ ] Sync this with my quarto-example repo
+- [x] Sync this with my quarto-example repo
 - [ ] [Issue](https://github.com/quarto-dev/quarto-cli/issues/2275) with labeling equation in `align` for pdf
 - [ ] Add `_quarto.yaml` settings for custom css
 - [ ] Add `_quarto.yaml` settings for latex styling

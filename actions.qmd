@@ -6,6 +6,9 @@ date: today
 How to build your document with GitHub Actions
 -------------------------------------------------------------------------------
 
+First, make sure you Pages settings are set for the repo.
+Got to GitHub repo > Settings > Pages and 
+
 Create a `.github/workflows/publish.yml` file with:
 
 ```

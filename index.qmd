@@ -1,5 +1,13 @@
 
 ## Preface {.unnumbered}
 
+------------
+
+**THIS REPO IS DEPRECATED BY:**
+
+[rreece/quarto-example](https://github.com/rreece/quarto-example)
+
+------------
+
 {{< lipsum 3 >}}
 
