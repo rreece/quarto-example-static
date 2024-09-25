@@ -120,7 +120,7 @@ which makes:
     bubble_sort(alist)
     print(alist)
 
-Or you can wrapp code blocks in three backticks, without indenting:
+Or you can wrap code blocks in three backticks, without indenting:
 
     ```
     def online_covariance(data1, data2):

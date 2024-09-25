@@ -11,14 +11,11 @@ BIB_TXT_FILES := $(sort $(wildcard bibs/*.txt))
 all: project_html
 
 ## create html
-html: $(HTML_FILES)
-
-#%.html: %.qmd _quarto.yml bibs/mybib.bib
-#	quarto render $< --to html
-#	$(PRINT) "make $@ done."
+#html: $(HTML_FILES)
+html: project_html
 
 docs/%.html: %.qmd _quarto.yml bibs/mybib.bib
-	quarto render $< --to html --quiet
+	quarto render $< --to html --no-clean --quiet
 	$(PRINT) "make $@ done."
 
 
@@ -26,8 +23,10 @@ project_html: $(QMD_FILES) _quarto.yml bibs/mybib.bib
 	quarto render --to html
 	$(PRINT) "make $@ done."
 
+
+## create pdf
 pdf: $(QMD_FILES) _quarto.yml bibs/mybib.bib
-	quarto render --to pdf
+	quarto render --to pdf --no-clean
 	$(PRINT) "make $@ done."
 
 
@@ -48,16 +47,17 @@ publish: html
 	quarto publish gh-pages --no-prompt --no-browser
 
 
-JUNK = *.log
-OUTS = docs
-
 ## clean up
+JUNK = *.log
+
 clean:
-	@rm -f $(JUNK)
+	rm -f $(JUNK)
 	$(PRINT) "make $@ done."
 
 ## clean up everything including the output
+OUTS = docs _freeze bibs/mybib.bib jupyter_files
+
 realclean: clean
-	@rm -rf $(OUTS)
+	rm -rf $(OUTS)
 	$(PRINT) "make $@ done."
 

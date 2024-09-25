@@ -1,5 +1,5 @@
 ---
-title: "Floats, Figures, and Tables"
+title: "Figures and Tables"
 date: today
 ---
 
@@ -56,7 +56,7 @@ produces:
     ](img/ATLAS-local-p0-vs-mH.png){#fig-ATLAS-local-p0-vs-mH}
 
 
-You can refer to labeled figuers like this:
+You can refer to labeled figures like this:
 
     [@fig-ATLAS-local-p0-vs-mH] shows the $p_{0}$ value as a function of the reconstructed
     Higgs mass from the ATLAS experiment.

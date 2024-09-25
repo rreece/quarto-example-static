@@ -2,7 +2,7 @@ project:
 #  type: website
   type: book
   output-dir: docs
-#  execute-dir: file
+
 
 book:
   title: "Quarto Static Example"
@@ -17,20 +17,23 @@ book:
     - figs-tables.qmd
     - jupyter.qmd
     - references.qmd
+  appendices:
+    - actions.qmd
 
   abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
   page-navigation: true
+  site-url: https://rreece.github.io/quarto-example-static
+  repo-url: https://github.com/rreece/quarto-example-static
+  favicon: img/markdown-favicon-196x196.png
   cover-image: img/The-Scream-Munch1893.png
-#  search: true
-#  repo-url: https://github.com/rreece/quarto-example-static
 
   sidebar:
     style: docked
     search: true
-    tools:
-      - icon: github
-        href: https://github.com/rreece/quarto-example-static
+#    tools:
+#      - icon: github
+#        href: https://github.com/rreece/quarto-example-static
 #    footer: "Copyright\n&copy; 2024 Ryan Reece"
 
 #  navbar:
@@ -49,15 +52,26 @@ book:
 
   page-footer:
     left:
-      - "Copyright &copy; 2024 Ryan Reece"
-    center:
+      - text: "Home"
+        href: index.qmd
       - text: "About"
         href: about.qmd
+    center:
+      - text: "&copy; 2024 Ryan Reece"
+        href: license.qmd
+    right:
+      - text: "Made with quarto-example-static"
+        href: https://github.com/rreece/quarto-example-static
+
 
 website:
   title: "Quarto Static Example"
 
   page-navigation: true
+  site-url: https://rreece.github.io/quarto-example-static
+  repo-url: https://github.com/rreece/quarto-example-static
+  favicon: img/markdown-favicon-196x196.png
+
 #  image: "quarto-dark-bg.jpeg"
 #  favicon: "favicon.png"
 #  google-analytics: "G-FV9Z7SDZ0M"
@@ -93,9 +107,10 @@ website:
       - figs-tables.qmd
       - jupyter.qmd
       - references.qmd
-    tools:
-      - icon: github
-        href: https://github.com/rreece/quarto-example-static
+#    tools:
+#      - icon: github
+#        href: https://github.com/rreece/quarto-example-static
+
 
 format:
   html:
@@ -109,14 +124,15 @@ format:
 #    toc-expand: 1
     number-sections: true
 #    number-depth: 3
-    fontsize: 1.1em
-    code-fold: true
+#    fontsize: 1.1em
+    mainfont: Georgia, Palatino, serif
     grid:
       sidebar-width: 250px
       body-width: 800px
       margin-width: 300px
       gutter-width: 1.5em
     html-math-method: mathjax
+    code-fold: true
     anchor-sections: true
     smooth-scroll: true
     citations-hover: true
@@ -129,6 +145,9 @@ format:
     self-contained-math: false
 
   pdf:
+    pdf-engine: pdflatex
+    latex-tinytex: true
+#    keep-tex: true
     documentclass: scrreprt
     papersize: letter
     toc: true
@@ -136,10 +155,9 @@ format:
     toc-title: "Contents"
     number-sections: true
 #    number-depth: 3
+    fontfamily: "mathpazo"
     colorlinks: true
 
-pdf-engine: pdflatex
-latex-tinytex: true
 
 crossref:
   fig-title: "Figure"

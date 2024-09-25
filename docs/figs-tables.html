@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-09-24">
 
-<title>5&nbsp; Floats, Figures, and Tables – Quarto Static Example</title>
+<title>5&nbsp; Figures and Tables – Quarto Static Example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,6 +53,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./jupyter.html" rel="next">
 <link href="./math.html" rel="prev">
+<link href="./img/markdown-favicon-196x196.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -134,7 +135,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./figs-tables.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Floats, Figures, and Tables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./figs-tables.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Figures and Tables</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,7 +152,7 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Quarto Static Example</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/rreece/quarto-example-static" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://github.com/rreece/quarto-example-static" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -196,7 +197,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./figs-tables.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Floats, Figures, and Tables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -211,6 +212,23 @@ window.Quarto = {
  <span class="menu-text">References</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./actions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">GitHub Actions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -232,7 +250,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Floats, Figures, and Tables</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Figures and Tables</span></h1>
 </div>
 
 
@@ -295,7 +313,7 @@ Figure&nbsp;5.2: The observed (solid) local <span class="math inline">\(p_{0}\)<
 </figcaption>
 </figure>
 </div>
-<p>You can refer to labeled figuers like this:</p>
+<p>You can refer to labeled figures like this:</p>
 <pre><code>[@fig-ATLAS-local-p0-vs-mH] shows the $p_{0}$ value as a function of the reconstructed
 Higgs mass from the ATLAS experiment.</code></pre>
 <p><a href="#fig-ATLAS-local-p0-vs-mH" class="quarto-xref">Figure&nbsp;<span>5.2</span></a> shows the <span class="math inline">\(p_{0}\)</span> value as a function of the reconstructed Higgs mass from the ATLAS experiment.</p>
@@ -698,7 +716,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/rreece\.github\.io\/quarto-example-static");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1044,21 +1062,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- Copyright © 2024 Ryan Reece
+    <a class="nav-link active" href="./index.html" aria-current="page">
+<p>Home</p>
+</a>
   </li>  
-</ul>
-    </div>   
-    <div class="nav-footer-center">
-      <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="./about.html">
 <p>About</p>
 </a>
   </li>  
 </ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./license.html">
+<p>© 2024 Ryan Reece</p>
+</a>
+  </li>  
+</ul>
     </div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/rreece/quarto-example-static">
+<p>Made with quarto-example-static</p>
+</a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>

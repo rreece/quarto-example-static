@@ -24,9 +24,33 @@ You can see the rendered website here:
 Quick start
 ----------------------------------
 
-Installation:
+### Installation
 
 TODO
+
+
+### Setting up a new document
+
+TODO
+
+
+### Compile to html
+
+Just call `make`
+
+
+### Compile to pdf
+
+Just call `make pdf`
+
+
+TODOs
+----------------------------------
+
+- [ ] Sync this with my quarto-example repo
+- [ ] [Issue](https://github.com/quarto-dev/quarto-cli/issues/2275) with labeling equation in `align` for pdf
+- [ ] Add `_quarto.yaml` settings for custom css
+- [ ] Add `_quarto.yaml` settings for latex styling
 
 
 Note these quarto issues
@@ -40,18 +64,6 @@ Note these quarto issues
 See also
 ----------------------------------
 
-My projects:
-
--   [github.com/rreece/quarto-example](https://github.com/rreece/quarto-example)
--   [github.com/rreece/markdown-easy](https://github.com/rreece/markdown-easy)
--   [github.com/rreece/markdown-memo](https://github.com/rreece/markdown-memo)
-
-Pandoc links:
-
--   [pandoc.org/README.html](http://pandoc.org/README.html)
--   [commonmark.org](http://commonmark.org/)
--   [github.com/lierdakil/pandoc-crossref](https://github.com/lierdakil/pandoc-crossref)
-
 Quarto links:
 
 -   [quarto.org](https://quarto.org/)
@@ -60,16 +72,11 @@ Quarto links:
 -   [quarto doc about github-pages](https://quarto.org/docs/publishing/github-pages.html)
 -   [example `_quarto.yml`](https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml)
 
-Other examples/blogs of writing with markdown:
+My projects:
 
--   [programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown)
--   [kprussing.github.io/writing-with-markdown](https://web.archive.org/web/20171026174128/http://kprussing.github.io/writing-with-markdown/)
--   [scholarlymarkdown.com](http://scholarlymarkdown.com/)
--   [github.com/simov/markdown-syntax](https://github.com/simov/markdown-syntax/blob/main/mermaid.md)
--   [markdownguide.org](https://www.markdownguide.org/getting-started/) --- source: [github.com/mattcone/markdown-guide-book](https://github.com/mattcone/markdown-guide-book/blob/master/manuscript/chapter3.md)
--   [github.com/gabyx/Technical-Markdown](https://github.com/gabyx/Technical-Markdown)
--   [mdBook](https://rust-lang.github.io/mdBook/)
--   [MkDocs](https://www.mkdocs.org/)
+-   [github.com/rreece/quarto-example](https://github.com/rreece/quarto-example)
+-   [github.com/rreece/markdown-easy](https://github.com/rreece/markdown-easy)
+-   [github.com/rreece/markdown-memo](https://github.com/rreece/markdown-memo)
 
 
 Author

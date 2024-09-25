@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-09-24">
 
-<title>References – Quarto Static Example</title>
+<title>Appendix A — GitHub Actions – Quarto Static Example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +31,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./actions.html" rel="next">
-<link href="./jupyter.html" rel="prev">
+<link href="./references.html" rel="prev">
 <link href="./img/markdown-favicon-196x196.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -104,7 +85,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./actions.html">Appendices</a></li><li class="breadcrumb-item"><a href="./actions.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">GitHub Actions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,7 +158,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -192,7 +173,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./actions.html" class="sidebar-item-text sidebar-link">
+  <a href="./actions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">GitHub Actions</span></span></a>
   </div>
 </li>
@@ -200,7 +181,13 @@ div.csl-indent {
   </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#how-to-build-your-document-with-github-actions" id="toc-how-to-build-your-document-with-github-actions" class="nav-link active" data-scroll-target="#how-to-build-your-document-with-github-actions"><span class="header-section-number">A.1</span> How to build your document with GitHub Actions</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -209,9 +196,9 @@ div.csl-indent {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./actions.html">Appendices</a></li><li class="breadcrumb-item"><a href="./actions.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">GitHub Actions</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title">Appendix A — GitHub Actions</h1>
 </div>
 
 
@@ -219,6 +206,12 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 24, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -228,57 +221,50 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron" class="csl-entry" role="listitem">
-ATLAS Collaboration. (2008). <span class="nocase">The ATLAS Experiment
-at the CERN Large Hadron Collider.</span> <em>Journal of
-Instrumentation</em>, <em><span>3</span></em>, 08003. <a href="https://cds.cern.ch/record/1129811">https://cds.cern.ch/record/1129811</a>
-</div>
-<div id="ref-ATLAS_2012_Observation_of_a_new_particle_in_the_search" class="csl-entry" role="listitem">
-———. (2012). <span class="nocase">Observation of a new particle in the
-search for the Standard Model Higgs boson with the ATLAS detector at the
-LHC.</span> <em>Physics Letters B</em>, <em><span>716</span></em>, 1–29.
-<a href="https://arxiv.org/abs/1207.7214">https://arxiv.org/abs/1207.7214</a>
-</div>
-<div id="ref-Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I" class="csl-entry" role="listitem">
-Feynman, R. P. (1963). <em><span class="nocase">The Feynman Lectures on
-Physics, Volume I</span></em>. <span>California Institute of
-Technology</span>. <a href="http://www.feynmanlectures.caltech.edu/I_03.html">http://www.feynmanlectures.caltech.edu/I_03.html</a>
-</div>
-<div id="ref-Feynman_1965_The_Development_of_the_Space_Time_View_of_Quantum" class="csl-entry" role="listitem">
-———. (1965). <span class="nocase">The Development of the Space-Time View
-of Quantum Electrodynamics</span>. <span>Nobel Lecture, December 11,
-1965</span>. <a href="http://www.nobelprize.org/nobel_prizes/physics/laureates/1965/feynman-lecture.html">http://www.nobelprize.org/nobel_prizes/physics/laureates/1965/feynman-lecture.html</a>
-</div>
-<div id="ref-Guest_2016_Jet_flavor_classification_in_high_energy_physics" class="csl-entry" role="listitem">
-Guest, D. et al. (2016). <span class="nocase">Jet flavor classification
-in high-energy physics with deep neural networks.</span> <em>Physical
-Review D</em>, <em><span>94</span></em>, 112002. <a href="https://arxiv.org/abs/1607.08633">https://arxiv.org/abs/1607.08633</a>
-</div>
-<div id="ref-Miller_2014_Realism" class="csl-entry" role="listitem">
-Miller, A. (2014). <span>Realism.</span> <em>Stanford Encyclopedia of
-Philosophy</em>. <a href="http://plato.stanford.edu/entries/realism/">http://plato.stanford.edu/entries/realism/</a>
-</div>
-<div id="ref-Plato_2000_The_Republic" class="csl-entry" role="listitem">
-Plato. (2000). <em><span>The Republic</span></em>. (T. Griffith, Trans.,
-G. Ferrari, Ed.). <span>Cambridge University Press</span>. (Originally
-written ca. 380 BCE).
-</div>
-<div id="ref-Quine_1960_Carnap_and_logical_truth" class="csl-entry" role="listitem">
-Quine, W. V. O. (1960). <span class="nocase">Carnap and logical
-truth.</span> <em>Synthese</em>, <em><span>12</span></em>, 350–374.
-</div>
-<div id="ref-Quine_1969_Natural_kinds" class="csl-entry" role="listitem">
-———. (1969). <span class="nocase">Natural kinds</span>. In <em><span class="nocase">Ontological Relativity and Other Essays</span></em> (pp.
-114–138). <span>Columbia University Press</span>.
-</div>
-<div id="ref-vanFraassen_1980_The_Scientific_Image" class="csl-entry" role="listitem">
-van Fraassen, B. (1980). <em><span>The Scientific Image</span></em>.
-<span>Oxford University Press</span>.
-</div>
-</div>
+<section id="how-to-build-your-document-with-github-actions" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="how-to-build-your-document-with-github-actions"><span class="header-section-number">A.1</span> How to build your document with GitHub Actions</h2>
+<p>Create a <code>.github/workflows/publish.yml</code> file with:</p>
+<pre><code>name: Quarto Publish
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install Python and Dependencies
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - run: pip install jupyter
+      - run: pip install -r requirements.txt
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}</code></pre>
+<p>TODO: finish</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://quarto.org/docs/publishing/github-pages.html">quarto doc about github-pages</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -847,14 +833,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./jupyter.html" class="pagination-link" aria-label="Jupyter">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Jupyter</span></span>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./actions.html" class="pagination-link" aria-label="GitHub Actions">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">GitHub Actions</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
